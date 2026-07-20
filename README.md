@@ -34,7 +34,7 @@ It provides a modern user interface with smooth animations, multiple themes, aca
 - 💾 Local Storage Support
 - 📊 Beautiful Dashboard
 - 🔥 Modern Glassmorphism UI
-- 
+  
 ---
 
 ## 🛠️ Tech Stack
@@ -96,11 +96,10 @@ Fork the repository and submit a Pull Request.
 
 ## 👨‍💻 Developer
 
-**Velselvam R**
+**R.Velselvam**
 
-🎓 Computer Science Engineering Student
-
-🚀 Aspiring AI/ML Engineer
+- 🎓 B.E. Computer Science and Engineering
+- 🚀 Aspiring AI/ML Engineer
 
 ### Connect with Me
 
