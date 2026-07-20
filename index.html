@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern GPA & CGPA Calculator</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Animated Gradient Mesh -->
+    <div class="mesh-background"></div>
+    <div class="mesh-glow-1"></div>
+    <div class="mesh-glow-2"></div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+
+        <!-- Sticky Top Bar -->
+        <header class="app-header">
+            <button class="menu-toggle-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+            <div class="app-logo">
+                <i class="fa-solid fa-graduation-cap header-logo-icon"></i>
+                <span class="app-title">Gradify</span>
+            </div>
+            <span class="active-page-title" id="active-page-title">Home</span>
+        </header>
+
+        <!-- Slide-in Mobile Menu -->
+        <div id="side-menu" class="side-menu">
+            <div class="menu-header">
+                <div class="menu-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Gradify</span>
+                </div>
+                <button class="menu-close-btn" onclick="toggleMenu()" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-items">
+                <button class="menu-item active" onclick="menuNavigate('landing-page')">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="menu-item" onclick="menuNavigate('regulation-page')">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Calculate GPA</span>
+                </button>
+                <button class="menu-item" onclick="menuNavigate('cgpa-page')">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Calculate CGPA</span>
+                </button>
+                <button class="menu-item" onclick="menuNavigate('settings-page-shortcut')">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </button>
+            </div>
+            <div class="menu-footer">
+                <div class="theme-menu-select">
+                    <span class="theme-menu-label">Active Theme</span>
+                    <div class="theme-pill-selector">
+                        <button class="theme-pill-btn" onclick="setTheme('light')" id="pill-light">Light</button>
+                        <button class="theme-pill-btn" onclick="setTheme('dark')" id="pill-dark">Dark</button>
+                        <button class="theme-pill-btn" onclick="setTheme('original')"
+                            id="pill-original">Original</button>
+                    </div>
+                </div>
+                <div class="dev-credits">Build 2.0.0 • Smart Academic Suite<br>✦ Created by Vels</div>
+            </div>
+        </div>
+        <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
+        <!-- 1. LANDING PAGE -->
+        <section id="landing-page" class="page active">
+            <div class="welcome-container scrollable-area">
+                <h1 class="welcome-text">Analyze Your <br><span class="gradient-text">Academic standing</span></h1>
+                <p class="subtitle">Compute, persist, and target your academic GPA & CGPA goals with app-like fluidity.
+                </p>
+
+                <!-- Premium Stats Dashboard -->
+                <div class="dashboard-wrapper animate-fade-up">
+                    <h3 class="dashboard-header-title">Student Dashboard</h3>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card glass-card">
+                            <div class="db-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="db-info">
+                                <span class="db-label">Current GPA</span>
+                                <span class="db-val" id="db-current-gpa">0.00</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-card glass-card">
+                            <div class="db-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="db-info">
+                                <span class="db-label">Current CGPA</span>
+                                <span class="db-val" id="db-current-cgpa">0.00</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-card glass-card">
+                            <div class="db-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div class="db-info">
+                                <span class="db-label">Credits Done</span>
+                                <span class="db-val" id="db-completed-credits">0.0</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-card glass-card target-card">
+                            <div class="db-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div class="db-info">
+                                <span class="db-label">Target CGPA</span>
+                                <div class="target-edit-wrapper">
+                                    <input type="number" id="db-target-cgpa" class="target-input-field" min="0" max="10"
+                                        step="0.01" value="9.00" onchange="updateTargetCGPA(this.value)">
+                                    <i class="fa-solid fa-pen sub-edit-pencil"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-grid animate-fade-up" style="margin-top: 1.5rem;">
+                    <button class="action-btn gpa-btn btn-ripple" onclick="navigateTo('regulation-page')">
+                        <span class="btn-icon"><i class="fa-solid fa-calculator"></i></span>
+                        <span class="btn-text">
+                            <strong>Calculate GPA</strong>
+                            <small>Regulation-specific subjects</small>
+                        </span>
+                        <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+
+                    <button class="action-btn cgpa-btn btn-ripple" onclick="navigateTo('cgpa-page')">
+                        <span class="btn-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="btn-text">
+                            <strong>Calculate CGPA</strong>
+                            <small>Overall semester average</small>
+                        </span>
+                        <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+                </div>
+
+                <div class="home-footer-credits animate-fade-up"
+                    style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; font-weight: 500; font-family: var(--font-primary); letter-spacing: 0.5px;">
+                    ✦ Created by Vels
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. REGULATION SELECTION -->
+        <section id="regulation-page" class="page">
+            <div class="selection-container">
+                <h2 class="section-title">Select <span class="gradient-text">Regulation</span></h2>
+                <p class="section-subtitle">Pick the curriculum regulation standard for your batch.</p>
+
+                <div class="selection-list root-navigation-list">
+                    <button class="select-card btn-ripple" onclick="selectRegulation('2021')">
+                        <span class="card-title">Regulation 2021</span>
+                        <span class="card-desc">Current semester curriculum standard for batches 2021-2024</span>
+                        <i class="fa-solid fa-circle-chevron-right card-arrow"></i>
+                    </button>
+
+                    <button class="select-card btn-ripple" onclick="selectRegulation('2025')">
+                        <span class="card-title">Regulation 2025</span>
+                        <span class="card-desc">Upcoming modernized syllabus curriculum standard</span>
+                        <i class="fa-solid fa-circle-chevron-right card-arrow"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. BRANCH SELECTION -->
+        <section id="branch-page" class="page">
+            <div class="selection-container">
+                <h2 class="section-title">Select <span class="gradient-text">Branch / Major</span></h2>
+                <p class="section-subtitle" id="branch-req-label">Regulation: --</p>
+
+                <div class="selection-list scrollable-area navigation-list" id="branch-list-container">
+                    <!-- Branches will be dynamically populated here loaded from JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SEMESTER SELECTION -->
+        <section id="semester-page" class="page">
+            <div class="selection-container">
+                <h2 class="section-title">Select <span class="gradient-text">Semester</span></h2>
+                <p class="section-subtitle" id="semester-info-label">Regulation / Branch</p>
+
+                <div class="grid-list scrollable-area" id="semester-grid-container">
+                    <!-- Semester 1 to 8 buttons -->
+                    <button class="grid-card btn-ripple" onclick="selectSemester(1)">
+                        <span class="grid-num">01</span>
+                        <span class="grid-text">Semester 1</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(2)">
+                        <span class="grid-num">02</span>
+                        <span class="grid-text">Semester 2</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(3)">
+                        <span class="grid-num">03</span>
+                        <span class="grid-text">Semester 3</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(4)">
+                        <span class="grid-num">04</span>
+                        <span class="grid-text">Semester 4</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(5)">
+                        <span class="grid-num">05</span>
+                        <span class="grid-text">Semester 5</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(6)">
+                        <span class="grid-num">06</span>
+                        <span class="grid-text">Semester 6</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(7)">
+                        <span class="grid-num">07</span>
+                        <span class="grid-text">Semester 7</span>
+                    </button>
+                    <button class="grid-card btn-ripple" onclick="selectSemester(8)">
+                        <span class="grid-num">08</span>
+                        <span class="grid-text">Semester 8</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. GPA CALCULATOR PAGE -->
+        <section id="gpa-calc-page" class="page">
+            <div class="calculator-container">
+                <h2 class="section-title">GPA <span class="gradient-text">Calculator</span></h2>
+                <p class="section-subtitle" id="gpa-info-label">Regulation / Branch / Semester</p>
+
+                <!-- Scrollable subjects container -->
+                <div class="subjects-list scrollable-area" id="subjects-container">
+                    <!-- Subject cards populated dynamically -->
+                </div>
+
+                <div class="calc-footer">
+                    <button class="btn-calculate btn-primary-gradient btn-ripple" onclick="calculateGPA()">
+                        <i class="fa-solid fa-circle-check"></i> Calculate GPA
+                    </button>
+                    <button class="btn-reset btn-ripple" onclick="debugAutofillGrades()"
+                        style="padding: 0.95rem 1.05rem;" title="Autofill (Debug)">
+                        <i class="fa-solid fa-magic"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CGPA CALCULATOR PAGE -->
+        <section id="cgpa-page" class="page">
+            <div class="calculator-container">
+                <h2 class="section-title">CGPA <span class="gradient-text">Calculator</span></h2>
+                <p class="section-subtitle">Enter your GPA for each semester to compute cumulative average.</p>
+
+                <!-- Scrollable GPAs container with floating labels -->
+                <div class="cgpa-inputs-grid scrollable-area">
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem1-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem1-gpa" class="floating-label">Semester 1 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem2-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem2-gpa" class="floating-label">Semester 2 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem3-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem3-gpa" class="floating-label">Semester 3 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem4-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem4-gpa" class="floating-label">Semester 4 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem5-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem5-gpa" class="floating-label">Semester 5 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem6-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem6-gpa" class="floating-label">Semester 6 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem7-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem7-gpa" class="floating-label">Semester 7 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                    <div class="floating-input-group glass-card">
+                        <input type="number" id="sem8-gpa" class="floating-input" placeholder=" " min="0" max="10"
+                            step="0.01" inputmode="decimal">
+                        <label for="sem8-gpa" class="floating-label">Semester 8 GPA</label>
+                        <span class="validation-stroke"></span>
+                    </div>
+                </div>
+
+                <div class="calc-footer">
+                    <button class="btn-calculate btn-primary-gradient btn-ripple" onclick="calculateCGPA()">
+                        <i class="fa-solid fa-circle-check"></i> Calculate CGPA
+                    </button>
+                    <button class="btn-reset btn-ripple" onclick="resetCGPA()">
+                        <i class="fa-solid fa-arrows-rotate"></i> Reset
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Action Buttons -->
+        <div class="floating-panel">
+            <button class="floating-btn theme-float-btn btn-ripple" onclick="cycleTheme()" aria-label="Switch Theme"
+                title="Theme Selector">
+                <i class="fa-solid fa-palette"></i>
+            </button>
+            <button class="floating-btn settings-float-btn btn-ripple" onclick="toggleSettingsModal()"
+                aria-label="Open Settings" title="Settings">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- 7. RESULT MODAL (UNIVERSAL MODAL) -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="result-badge-wrapper">
+                    <div class="result-ring"></div>
+                    <div class="result-number" id="modal-result-value">0.00</div>
+                </div>
+                <h3 class="result-title" id="modal-result-title">Your GPA</h3>
+                <p class="result-message" id="modal-result-msg">Excellent performance! Keep it up.</p>
+                <button class="btn-done btn-primary-gradient btn-ripple" onclick="closeModal()">Awesome!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. SETTINGS MODAL / CONTROL PANEL -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" onclick="toggleSettingsModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="settings-modal-header">
+                    <i class="fa-solid fa-sliders modal-settings-icon animated-icon"></i>
+                    <h3 class="result-title">Settings Portal</h3>
+                </div>
+                <p class="result-message">Configure theme controls and clear local analytics.</p>
+
+                <div class="settings-options-list">
+                    <div class="settings-option-item glass-card">
+                        <span class="opt-label"><i class="fa-solid fa-palette"></i> App Theme</span>
+                        <div class="theme-select-select-wrapper">
+                            <select id="option-theme-switcher" class="opt-theme-select"
+                                onchange="setTheme(this.value); toggleSettingsModal();">
+                                <option value="original">Original Violet</option>
+                                <option value="dark">Vercel Dark</option>
+                                <option value="light">Notion Light</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-option-item glass-card">
+                        <span class="opt-label"><i class="fa-solid fa-database"></i> Local Data</span>
+                        <button class="btn-danger-clear btn-ripple" onclick="clearAllData()">
+                            <i class="fa-solid fa-trash-can"></i> Reset Records
+                        </button>
+                    </div>
+                </div>
+
+                <button class="btn-done btn-primary-gradient btn-ripple" style="margin-top: 1.5rem;"
+                    onclick="toggleSettingsModal()">Done</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
