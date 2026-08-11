@@ -48,7 +48,7 @@ It provides a modern user interface with smooth animations, multiple themes, aca
 
 ## 🚀 Live Demo
 
-🔗 link : https://gradify-au-1122.netlify.app/
+🔗 link : https://gradify-au-1122.vercel.app/
 
 ---
 
