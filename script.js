@@ -1028,7 +1028,9 @@ function getGradePoints(regulation) {
 function getSubjects(regulation, branch, semester) {
     // Check if database contains exact subjects
     if (SUBJECT_SCHEMAS[regulation] && SUBJECT_SCHEMAS[regulation][branch] && SUBJECT_SCHEMAS[regulation][branch][semester]) {
-        return SUBJECT_SCHEMAS[regulation][branch][semester];
+        const subjects = [...SUBJECT_SCHEMAS[regulation][branch][semester]];
+        subjects.push({ code: "NM", name: "Naan Mudalvan", credits: 2, optional: true });
+        return subjects;
     }
 
     // Otherwise, generate realistic mock subjects for testing flow
@@ -1064,6 +1066,8 @@ function getSubjects(regulation, branch, semester) {
         credits: 1.5
     });
 
+    mockSubjects.push({ code: "NM", name: "Naan Mudalvan", credits: 2, optional: true });
+
     return mockSubjects;
 }
 
@@ -1077,6 +1081,225 @@ const state = {
     selectedSemester: null,
     pageHistory: ['landing-page']
 };
+
+const PE_SUBJECTS_CSE = [
+    "Exploratory Data Analysis", "Recommender Systems", "Neural Networks and Deep Learning", 
+    "Text and Speech Analysis", "Business Analytics", "Image and Video Analytics", 
+    "Computer Vision", "Big Data Analytics", "Web Technologies", "App Development", 
+    "Cloud Services Management", "UI and UX Design", "Software Testing and Automation", 
+    "Web Application Security", "DevOps", "Principles of Programming Languages", 
+    "Cloud Computing", "Virtualization", "Data Warehousing", "Storage Technologies", 
+    "Software Defined Networks", "Stream Processing", "Security and Privacy in Cloud", 
+    "Ethical Hacking", "Digital and Mobile Forensics", "Social Network Security", 
+    "Modern Cryptography", "Engineering Secure Software Systems", "Cryptocurrency and Blockchain Technologies", 
+    "Network Security", "Augmented Reality/Virtual Reality", "Multimedia and Animation", 
+    "Video Creation and Editing", "Digital marketing", "Visual Effects", "Game Development", 
+    "Multimedia Data Compression and Storage", "Robotic Process Automation", "Cyber security", 
+    "Quantum Computing", "3D Printing and Design", "Knowledge Engineering", "Soft Computing", 
+    "Optimization Techniques", "Game Theory", "Cognitive Science", "Ethics And AI"
+];
+
+const PE_SUBJECTS_ECE = [
+    "Wide Bandgap Devices", "Validation and Testing Technology", "Low Power IC Design", 
+    "VLSI Testing and Design For Testability", "Mixed Signal IC Design Testing", "Analog IC Design", 
+    "Advanced Digital Signal Processing", "Image Processing", "Speech Processing", "Software Defined Radio", 
+    "DSP Architecture and Programming", "Computer Vision", "RF Transceivers", "Signal Integrity", 
+    "Antenna Design", "MICs and RF System Design", "EMI/EMC Pre Compliance Testing", 
+    "RF ID System Design & Testing", "Wearable Devices", "Human Assist Devices", "Therapeutic Equipment", 
+    "Medical Imaging Systems", "Brain Computer Interface and Applications", "Body Area Networks", 
+    "Underwater Instrumentation System", "Underwater Imaging Systems and Image Processing", 
+    "Underwater Communication", "Ocean Observation Systems", "Underwater Navigation Systems", 
+    "Ocean Acoustics", "IoT Processors", "IoT Based System Design", "Wireless Sensor Network Design", 
+    "Industrial IoT and Industry 4.0", "MEMS Design", "Fundamentals of Nanoelectronics", 
+    "Radar Technologies", "Avionics Systems", "Positioning and Navigation Systems", "Satellite Communication", 
+    "Remote Sensing", "Rocketry and Space Mechanics", "Optical Communication & Networks", 
+    "Wireless Broad Band Networks", "4G/5G Communication Networks", "Software Defined Networks", 
+    "Massive MIMO Networks", "Advanced Wireless Communication Techniques"
+];
+
+const PE_SUBJECTS_EEE = [
+    "Utilization and Conservation of Electrical Energy", "Under Ground Cable Engineering", 
+    "Substation Engineering and Automation", "HVDC and FACTS", "Energy Management and Auditing", 
+    "Power Quality", "Smart Grids", "Restructured Power Market", "Special Electrical Machines", 
+    "Analysis of Electrical Machines", "Multilevel Power Converters", "Electrical Drives", 
+    "SMPS and UPS", "Power Electronics for Renewable Energy Systems", "Control of Power Electronics Circuits", 
+    "Embedded System Design", "Embedded C-Programming", "Embedded Processors", 
+    "Embedded Control for Electric Drives", "Smart System Automation", 
+    "Embedded System for Automotive Applications", "VLSI Design", "MEMS and NEMS", 
+    "Digital Signal Processing System Design", "Electric Vehicle Architecture", 
+    "Design of Motor and Power Converters for Electric Vehicles", 
+    "Electric Vehicle Design, Mechanics and Control", "Design of Electric Vehicle Charging System", 
+    "Testing of Electric Vehicles", "Grid Integration of Electric Vehicles", 
+    "Intelligent control of Electric Vehicles", "Process Modeling and Simulation", 
+    "Computer Control of Processes", "System Identification", "Model Based Control", 
+    "Non Linear Control", "Optimal Control", "Adaptive Control", "Machine Monitoring System", 
+    "Energy Storage Systems", "Hybrid Energy Technology", "Design and Modelling of Renewable Energy Systems", 
+    "Grid integrating Techniques and Challenges", "Sustainable and Environmental Friendly HV Insulation System", 
+    "Power System Transients", "PLC Programming", "Big Data Analytics"
+];
+
+const PE_SUBJECTS_MECH = [
+    "Automotive Materials, Components, Design & Testing", "Conventional and Futuristic Vehicle Technology", 
+    "Renewable Powered Off Highway Vehicles and Emission Control Technology", "Vehicle Health Monitoring, Maintenance and Safety", 
+    "CAE and CFD Approach in Future Mobility", "Hybrid and Electric Vehicle Technology", "Thermal Management of Batteries and Fuel Cells", 
+    "Value Engineering", "Additive Manufacturing", "CAD/CAM", "Design For X", "Ergonomics in Design", 
+    "New Product Development", "Product Life Cycle Management", "Sensors and Instrumentation", 
+    "Electrical Drives and Actuators", "Embedded Systems and Programming", "Robotics", 
+    "Smart Mobility and Intelligent Vehicles", "Haptics and Immersive Technologies", "Drone Technologies", 
+    "Digital Manufacturing and IoT", "Lean Manufacturing", "Modern Robotics", "Green Manufacturing Design and Practices", 
+    "Environment and Sustainability Impact Assessment", "Energy Saving Machinery and Components", "Green Supply Chain Management", 
+    "Design of Pressure Vessels", "Failure Analysis and NDT Techniques", "Material Handling and solid processing Equipment", 
+    "Rotating Machinery Design", "Thermal and Fired Equipment design", "Industrial Layout Design and Safety", 
+    "Design Codes and Standards", "Bioenergy Conversion Technologies", "Carbon Footprint estimation and reduction techniques", 
+    "Energy Conservation in Industries", "Energy Efficient Buildings", "Energy Storage Devices", 
+    "Renewable Energy Technologies", "Equipment for Pollution Control", "Computational Solid Mechanics", 
+    "Computational Fluid Dynamics and Heat transfer", "Theory on Computation and Visualization", 
+    "Computational Bio-Mechanics", "Advanced Statistics and Data Analytics", "CAD and CAE", 
+    "Machine Learning for Intelligent Systems", "Automobile Engineering", "Measurements and Controls", 
+    "Design Concepts in Engineering", "Composite Materials and Mechanics", "Electrical Drives and Control", 
+    "Power Plant Engineering", "Refrigeration and Air Conditioning", "Dynamics of Ground Vehicles", 
+    "Turbo Machines", "Non-traditional Machining Processes", "Industrial safety", "Design of Transmission System", 
+    "Thermal Power Engineering", "Design for Manufacturing", "Power Generation Equipment Design", 
+    "Advanced Vehicle Engineering", "Advanced Internal Combustion Engineering", "Casting and Welding Processes", 
+    "Process Planning and Cost Estimation", "Surface Engineering", "Precision Manufacturing", 
+    "Gas Dynamics and Jet Propulsion", "Operational Research"
+];
+
+const PE_SUBJECTS_CIVIL = [
+    "Concrete Structures", "Steel Structures", "Prefabricated Structures", 
+    "Prestressed Concrete Structures", "Rehabilitation/Heritage Restoration", 
+    "Dynamics and Earthquake Resistant Structures", "Introduction to Finite Element Method", 
+    "Formwork Engineering", "Construction Equipment and Machinery", 
+    "Sustainable Construction and Lean Construction", "Digitalized Construction Lab", 
+    "Construction Management and Safety", "Advanced Construction Techniques", 
+    "Energy Efficient Buildings", "Geo-Environmental Engineering", "Ground Improvement Techniques", 
+    "Soil Dynamics and Machine Foundations", "Rock Mechanics", "Earth and Earth Retaining Structures", 
+    "Pile Foundation", "Tunneling Engineering", "Total Station and GPS Surveying", 
+    "Remote Sensing Concepts", "Satellite Image Processing", "Cartography and GIS", 
+    "Photogrammetry", "Airborne and Terrestrial laser mapping", "Hydrographic Surveying", 
+    "Airports and Harbours", "Traffic Engineering and Management", "Urban Planning and Development", 
+    "Smart cities", "Intelligent Transportation Systems", "Pavement Engineering", 
+    "Transportation planning Process", "Climate Change Adaptation and Mitigation", 
+    "Air and Noise Pollution Control Engineering", "Environmental Impact Assessment", 
+    "Industrial Wastewater Management", "Solid and Hazardous Waste Management", 
+    "Environmental Policy and Legislations", "Environment, Health and Safety", 
+    "Irrigation Engineering and Drawing", "Groundwater Engineering", "Water Resources Systems Engineering", 
+    "Watershed Conservation and Management", "Integrated Water Resources Management", 
+    "Urban Water Infrastructure", "Water Quality and Management", "Ocean Wave Dynamics", 
+    "Marine Geotechnical Engineering", "Coastal Engineering", "Offshore Structures", 
+    "Port and Harbour Engineering", "Coastal Hazards and Mitigation", 
+    "Coastal Zone Management and Remote Sensing", "Steel Concrete Composite Structures", 
+    "Finance For Engineers", "Earth and Rockfill Dams", "Computational Fluid Dynamics", 
+    "Rainwater Harvesting", "Transport and Environment", "Environmental quality Monitoring"
+];
+
+const PE_SUBJECTS_AIDS = [
+    "Knowledge Engineering", "Recommender Systems", "Soft Computing", "Text and Speech Analysis", 
+    "Business Analytics", "Image and video analytics", "Computer Vision", "Big Data Analytics", 
+    "Cloud Computing", "App Development", "Cloud Services Management", "UI and UX Design", 
+    "Software Testing and Automation", "Web Application Security", "DevOps", "Principles of Programming Languages", 
+    "Virtualization", "Data Warehousing", "Storage Technologies", "Software Defined Networks", 
+    "Stream Processing", "Security and Privacy in Cloud", "Ethical Hacking", "Digital and Mobile Forensics", 
+    "Social Network Security", "Modern Cryptography", "Engineering Secure Software Systems", 
+    "Cryptocurrency and Blockchain Technologies", "Network Security", "Augmented Reality/Virtual Reality", 
+    "Multimedia and Animation", "Video Creation and Editing", "Digital marketing", 
+    "Multimedia Data Compression and Storage", "Game Development", "Visual Effects", 
+    "Robotic Process Automation", "Neural Networks and Deep Learning", "Cyber Security", 
+    "Quantum Computing", "3D Printing and Design", "Bio-Inspired Optimization Techniques", 
+    "Health Care Analytics", "Optimization Techniques", "Game Theory", "Cognitive Science", "Ethics and AI"
+];
+
+const PE_SUBJECTS_2025_AIDS = [
+    "Reinforcement Learning", "Explainable AI", "Computational Neuroscience", "Generative AI", 
+    "MLOps", "Data Curation and Visualization", "Stream Data Analytics", "Social Network Analytics", 
+    "Bioinformatics", "Edge AI", "Robot Operating System", "Materials Informatics", 
+    "Robotics Vision and Sensing", "Expert Systems", "Multiagent Systems", "Big Data Frameworks", 
+    "Cloud Computing", "Cyber Security", "Cyber Forensics", "Quantum Cryptographic Techniques", 
+    "Quantum Computing", "Vibe Coding", "GPU Programming", "Real Time Operating Systems", 
+    "Hardware Architectures for AI", "Dynamic Paradigm for IoT", "Smart IoT Architecture", 
+    "Wearable Computing", "IoT in 5G Networks", "IoT and Smart Cities"
+];
+
+const PE_SUBJECTS_2025_CSE = [
+    "Computational Intelligent Techniques", "Intelligent Transportation Systems", 
+    "Generative AI and Prompt Engineering", "Responsible and Equitable AI", 
+    "Reactive Machines and Self-aware AI", "Big Data Analytics", "Recommender Systems", 
+    "Image and Video Analytics", "Text and Speech Analytics", "Bioinformatics", 
+    "Design Thinking and Innovation", "UI and UX Design and Human-centered Design", 
+    "Java Spring Boot", "DevOps", "Vibe Coding", "Information Security", 
+    "Privacy in Communication Networks", "Mobile Forensics", "Web and IoT Security", 
+    "Cryptocurrency and Blockchain Technologies", "Cloud Computing", 
+    "Augmented Reality/Virtual Reality", "Edge and Fog Computing", "Granular Computing", 
+    "Quantum Computing", "Dynamic Paradigm for IoT", "Smart IoT Architecture", 
+    "Wearable Computing", "IoT in 5G Networks", "IoT and Smart Cities"
+];
+
+const PE_SUBJECTS_2025_ECE = [
+    "ASIC IC Design", "CAD for VLSI Design", "Low Power IC Design", "Mixed Signal IC Design", 
+    "VLSI Testing and Design for Testability", "Network on Chip design", "Advanced Digital Signal Processing", 
+    "Digital Image and Video Processing", "VLSI Signal Processing", "DSP Architecture and Programming", 
+    "Computer Vision", "Pattern Recognition", "RF Transceivers Design", "Smart Antennas", 
+    "Signal Integrity for High Speed Design", "MICs and RF System Design", "RFID System Design & Testing", 
+    "Electromagnetic Interference and Compatibility", "Smart Sensors", "Body Area Networks", 
+    "Medical Imaging Systems", "MEMS and NEMS Design", "Automotive Electronics", 
+    "Brain Computer Interface and Applications", "Radar and Navigation Systems", "Remote sensing", 
+    "Advanced wireless communication", "Satellite Communication", "MIMO and Millimeter wave communication", 
+    "Quantum Communication (New)", "Natural Language Processing", "Block Chain Technology", 
+    "Deep Learning", "Edge and Cloud Computing", "Cyber security", "Robotics and Automation"
+];
+
+const PE_SUBJECTS_2025_EEE = [
+    "Utilization and Conservation of Electrical Energy", "Substation Engineering and Automation", 
+    "Restructured Power Market", "Smart Grid", "HVDC and FACTS", "Power system Transients", 
+    "Renewable Energy Systems", "Power System Operation and Control", "Grid Integration Techniques", 
+    "Condition Monitoring and Testing of Electrical Equipment", "Special Electrical Machines", 
+    "Modern Power Converters", "Analysis of Electrical Machines", "SMPS and UPS", 
+    "Power Electronics for Renewable Energy Systems", "Control of Power Electronic systems", 
+    "Electrical Drives", "Power Quality", "Digital Signal Processing", "Smart System Automation", 
+    "MEMS and NEMS", "Embedded Communication Protocols", "Embedded System Design", 
+    "Embedded Processors", "Internet of things", "Signals and Systems", "e-Mobility", 
+    "Electric Vehicle Architecture", "Design of Motor and Power Converters for Electric Vehicles", 
+    "Battery Management Systems", "EV Charging infrastructure", "Safety and Testing of Electric Vehicles", 
+    "Connected Vehicles", "Drone Technologies", "Process modelling and Simulation", 
+    "Computer Control of Processes", "Model based control", "Non Linear Control", "Optimal Control", 
+    "Adaptive Control", "Process Control", "System Identification Techniques", "Factory Automation", 
+    "Hybrid Energy Technology", "Design and Modelling of Renewable Energy Systems", 
+    "Energy Management and Auditing", "VLSI Design", "Substation Erection", "Power Plant Engineering", 
+    "EMI and EMC", "Machine Learning", "Energy Storage System"
+];
+
+const PE_SUBJECTS_2025_MECH = [
+    "Refrigeration & HVAC Systems", "Battery Technology", "Gas Dynamics and Jet Propulsion", 
+    "Vehicle Technology", "Computational Fluid Dynamics", "Renewable Energy Systems", 
+    "Energy Conservation and Management", "Digital Manufacturing", "Robotic Systems", 
+    "Industrial IoT", "Welding Engineering", "Design for Manufacturing and Assembly", 
+    "Additive Manufacturing", "Computer-Aided Design and Prototyping", "Tool Design", 
+    "Tribological Design", "Mechanical Vibrations", "Digital Twin", "Electric Vehicle Design", 
+    "Integrated Product Design and Development", "Composite Materials", "Fundamentals of Nanomaterials", 
+    "Nano Technology and Surface Engineering", "Materials for Electronics", "Materials Characterization", 
+    "Mechanical Behaviour of Materials", "Smart Materials", "Optimisation Techniques", 
+    "Lean Manufacturing", "Supply Chain Analytics", "Quality Engineering", "Life Cycle Assessment"
+];
+
+const PE_SUBJECTS_2025_CIVIL = [
+    "Prefabricated Structures", "Dynamics and Earthquake Resistant Structures", 
+    "Maintenance, Repair and Rehabilitation", "Energy Efficient Buildings", 
+    "Construction Management and Safety", "Ground Improvement Techniques", "Soil Dynamics", 
+    "Earth Retaining Structures", "Rock Mechanics", "Geo-Environmental Engineering", 
+    "Traffic Engineering and Management", "Urban Planning and Development", 
+    "Intelligent Transportation Systems", "Pavement Engineering", "Geomatics for Transportation", 
+    "Solid and hazardous waste management", "Industrial wastewater management", 
+    "Air and noise pollution", "Environmental Impact Assessment", "Environmental Health and Safety", 
+    "Hydrology and Water Resources Engineering", "Groundwater Engineering", 
+    "Integrated Water Resources Management", "Remote Sensing and GIS", 
+    "Geomatics for Hydrology and Water Resources", "Artificial Intelligence in Civil Engineering", 
+    "Design of Bridges", "Dam Engineering", "Underground structures", "Formwork Engineering", 
+    "Offshore structures"
+];
+
+let activePEIndex = null;
+let activePESelection = null;
+let selectedPEs = {}; // Tracks selected PE subjects by index string `${semester}-${index}`
 
 const pageTitles = {
     'landing-page': 'Home',
@@ -1249,42 +1472,6 @@ function updateTargetCGPA(val) {
     }
 }
 
-// Cycling standard theme loops (Light -> Dark -> Original -> Light)
-function cycleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'original';
-    const themesCycle = {
-        'original': 'light',
-        'light': 'dark',
-        'dark': 'original'
-    };
-    const nextTheme = themesCycle[currentTheme] || 'original';
-    setTheme(nextTheme);
-}
-
-// Handle global theme selection
-function setTheme(themeName) {
-    document.documentElement.setAttribute('data-theme', themeName);
-    localStorage.setItem('gpa_app_theme', themeName);
-
-    // Sync settings page select option
-    const themeSwitcher = document.getElementById('option-theme-switcher');
-    if (themeSwitcher) {
-        themeSwitcher.value = themeName;
-    }
-
-    // Sync sidebar pills active states
-    const pills = ['light', 'dark', 'original'];
-    pills.forEach(p => {
-        const pillBtn = document.getElementById(`pill-${p}`);
-        if (pillBtn) {
-            if (p === themeName) {
-                pillBtn.classList.add('active');
-            } else {
-                pillBtn.classList.remove('active');
-            }
-        }
-    });
-}
 
 // ==========================================================================
 // 3. UI GENERATION AND USER SELECTIONS
@@ -1363,16 +1550,45 @@ function selectSemester(semesterNum) {
                     <option value="W">W (Withdrawal) - 0</option>`;
 
     subjects.forEach((sub, index) => {
+        let isPE = false;
+        let displayName = sub.name;
+        let peButtonHtml = '';
+        
+        // Hide code for Open, Professional, Programme Electives, and Mandatory Courses across all regulations
+        const nameLower = sub.name.toLowerCase();
+        const hideCode = nameLower.includes("open elective") || 
+                         nameLower.includes("professional elective") || 
+                         nameLower.includes("programme elective") ||
+                         nameLower.includes("mandatory course");
+
+        const isProfessionalElective = sub.name.includes("Professional Elective") && 
+            ((state.selectedRegulation === '2021' && ['cse', 'ece', 'eee', 'mech', 'civil', 'aids'].includes(state.selectedBranch)) || 
+             (state.selectedRegulation === '2025' && state.selectedBranch === 'ece'));
+             
+        const isProgrammeElective = sub.name.includes("Programme Elective") && 
+            (state.selectedRegulation === '2025' && ['aids', 'cse', 'eee', 'mech', 'civil'].includes(state.selectedBranch));
+
+        if (isProfessionalElective || isProgrammeElective) {
+            isPE = true;
+            if (selectedPEs[`${state.selectedSemester}-${index}`]) {
+                displayName = selectedPEs[`${state.selectedSemester}-${index}`];
+            }
+            peButtonHtml = `<button class="btn-pe-select" onclick="openPEModal(${index})">
+                <span class="pe-subject-name" id="pe-name-${index}">${displayName}</span>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>`;
+        }
+
         const card = document.createElement('div');
         card.className = 'subject-card';
         card.innerHTML = `
             <div class="subject-header">
-                <span class="subject-code">${sub.code}</span>
-                <span class="subject-name">${sub.name}</span>
+                ${hideCode ? '' : `<span class="subject-code">${sub.code}</span>`}
+                ${isPE ? peButtonHtml : `<span class="subject-name">${sub.name}${sub.optional ? ' <span style="font-size: 0.8em; opacity: 0.7;">(Optional)</span>' : ''}</span>`}
             </div>
             <div class="grade-select-wrapper">
-                <select class="grade-select" id="grade-select-${index}" data-credits="${sub.credits}">
-                    ${gradeOptions}
+                <select class="grade-select" id="grade-select-${index}" data-credits="${sub.credits}" data-optional="${sub.optional ? 'true' : 'false'}">
+                    ${sub.optional ? gradeOptions.replace('disabled', '') : gradeOptions}
                 </select>
             </div>
         `;
@@ -1401,11 +1617,16 @@ function calculateGPA() {
         const selectEl = document.getElementById(`grade-select-${index}`);
         const chosenGrade = selectEl.value;
         const credits = parseFloat(selectEl.getAttribute('data-credits'));
+        const isOptional = selectEl.getAttribute('data-optional') === 'true';
 
         if (chosenGrade === "") {
-            hasUnselected = true;
-            // Highlight container in red
-            selectEl.parentElement.parentElement.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+            if (!isOptional) {
+                hasUnselected = true;
+                // Highlight container in red
+                selectEl.parentElement.parentElement.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+            } else {
+                selectEl.parentElement.parentElement.style.borderColor = 'var(--glass-border)';
+            }
         } else {
             selectEl.parentElement.parentElement.style.borderColor = 'var(--glass-border)';
             const points = gradeMap[chosenGrade];
@@ -1491,6 +1712,90 @@ function resetCGPA() {
     }
 }
 
+// ==========================================================================
+// 5. PROFESSIONAL ELECTIVE SELECTION LOGIC
+// ==========================================================================
+
+function openPEModal(index) {
+    activePEIndex = index;
+    activePESelection = null;
+    document.getElementById('pe-search-input').value = '';
+    document.getElementById('btn-confirm-pe').disabled = true;
+    
+    const is2025ProgrammeElective = state.selectedRegulation === '2025' && ['aids', 'cse', 'eee', 'mech', 'civil'].includes(state.selectedBranch);
+    const typeName = is2025ProgrammeElective ? "Programme Elective" : "Professional Elective";
+    const titleEl = document.querySelector('.pe-modal-content .result-title');
+    if (titleEl) titleEl.innerText = `Select ${typeName}`;
+    const searchInputEl = document.getElementById('pe-search-input');
+    if (searchInputEl) searchInputEl.placeholder = `Search ${typeName}...`;
+
+    document.getElementById('pe-modal').classList.add('active');
+    filterPEList();
+}
+
+function closePEModal() {
+    document.getElementById('pe-modal').classList.remove('active');
+}
+
+function filterPEList() {
+    const searchText = document.getElementById('pe-search-input').value.toLowerCase();
+    const container = document.getElementById('pe-list-container');
+    container.innerHTML = '';
+    
+    let subjectList = PE_SUBJECTS_CSE;
+    if (state.selectedRegulation === '2021') {
+        if (state.selectedBranch === 'ece') subjectList = PE_SUBJECTS_ECE;
+        if (state.selectedBranch === 'eee') subjectList = PE_SUBJECTS_EEE;
+        if (state.selectedBranch === 'mech') subjectList = PE_SUBJECTS_MECH;
+        if (state.selectedBranch === 'civil') subjectList = PE_SUBJECTS_CIVIL;
+        if (state.selectedBranch === 'aids') subjectList = PE_SUBJECTS_AIDS;
+    } else if (state.selectedRegulation === '2025') {
+        if (state.selectedBranch === 'aids') subjectList = PE_SUBJECTS_2025_AIDS;
+        if (state.selectedBranch === 'cse') subjectList = PE_SUBJECTS_2025_CSE;
+        if (state.selectedBranch === 'ece') subjectList = PE_SUBJECTS_2025_ECE;
+        if (state.selectedBranch === 'eee') subjectList = PE_SUBJECTS_2025_EEE;
+        if (state.selectedBranch === 'mech') subjectList = PE_SUBJECTS_2025_MECH;
+        if (state.selectedBranch === 'civil') subjectList = PE_SUBJECTS_2025_CIVIL;
+    }
+
+    const filtered = subjectList.filter(name => name.toLowerCase().includes(searchText));
+    
+    if (filtered.length === 0) {
+        const is2025ProgrammeElective = state.selectedRegulation === '2025' && ['aids', 'cse', 'eee', 'mech', 'civil'].includes(state.selectedBranch);
+        const typeName = is2025ProgrammeElective ? "Programme Elective" : "Professional Elective";
+        container.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 1rem;">No ${typeName} found.</div>`;
+        return;
+    }
+
+    filtered.forEach(name => {
+        const isSelected = activePESelection === name;
+        const card = document.createElement('div');
+        card.className = `pe-card ${isSelected ? 'selected' : ''}`;
+        card.onclick = () => selectPE(name);
+        card.innerHTML = `
+            <i class="fa-regular ${isSelected ? 'fa-circle-check' : 'fa-circle'} pe-card-icon"></i>
+            <span class="pe-card-name">${name}</span>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function selectPE(subjectName) {
+    activePESelection = subjectName;
+    document.getElementById('btn-confirm-pe').disabled = false;
+    filterPEList(); // Re-render to show selection
+}
+
+function confirmPESelection() {
+    if (!activePESelection) return;
+    
+    const semesterKey = `${state.selectedSemester}-${activePEIndex}`;
+    selectedPEs[semesterKey] = activePESelection;
+    
+    document.getElementById(`pe-name-${activePEIndex}`).innerText = activePESelection;
+    closePEModal();
+}
+
 // Result Feedbacks
 function getGPAFeedBack(gpa) {
     if (gpa >= 9.0) return "Spectacular! You are performing at a top-tier academic level.";
@@ -1552,10 +1857,7 @@ function animateValue(obj, start, end, duration) {
 
 // Init Setup on Script load
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Load Theme configuration
-    const savedTheme = localStorage.getItem('gpa_app_theme') || 'original';
-    setTheme(savedTheme);
-
+    // App relies on the original default theme.
     // 2. Load Dashboard persisted states
     const savedGPA = parseFloat(localStorage.getItem('saved_gpa')) || 0.00;
     const savedCGPA = parseFloat(localStorage.getItem('saved_cgpa')) || 0.00;
