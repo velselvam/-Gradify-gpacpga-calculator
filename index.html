@@ -67,15 +67,7 @@
                 </button>
             </div>
             <div class="menu-footer">
-                <div class="theme-menu-select">
-                    <span class="theme-menu-label">Active Theme</span>
-                    <div class="theme-pill-selector">
-                        <button class="theme-pill-btn" onclick="setTheme('light')" id="pill-light">Light</button>
-                        <button class="theme-pill-btn" onclick="setTheme('dark')" id="pill-dark">Dark</button>
-                        <button class="theme-pill-btn" onclick="setTheme('original')"
-                            id="pill-original">Original</button>
-                    </div>
-                </div>
+
                 <div class="dev-credits">Build 2.0.0 • Smart Academic Suite<br>✦ Created by Vels</div>
             </div>
         </div>
@@ -326,10 +318,7 @@
 
         <!-- Floating Action Buttons -->
         <div class="floating-panel">
-            <button class="floating-btn theme-float-btn btn-ripple" onclick="cycleTheme()" aria-label="Switch Theme"
-                title="Theme Selector">
-                <i class="fa-solid fa-palette"></i>
-            </button>
+
             <button class="floating-btn settings-float-btn btn-ripple" onclick="toggleSettingsModal()"
                 aria-label="Open Settings" title="Settings">
                 <i class="fa-solid fa-gear"></i>
@@ -370,17 +359,7 @@
                 <p class="result-message">Configure theme controls and clear local analytics.</p>
 
                 <div class="settings-options-list">
-                    <div class="settings-option-item glass-card">
-                        <span class="opt-label"><i class="fa-solid fa-palette"></i> App Theme</span>
-                        <div class="theme-select-select-wrapper">
-                            <select id="option-theme-switcher" class="opt-theme-select"
-                                onchange="setTheme(this.value); toggleSettingsModal();">
-                                <option value="original">Original Violet</option>
-                                <option value="dark">Vercel Dark</option>
-                                <option value="light">Notion Light</option>
-                            </select>
-                        </div>
-                    </div>
+
 
                     <div class="settings-option-item glass-card">
                         <span class="opt-label"><i class="fa-solid fa-database"></i> Local Data</span>
@@ -396,6 +375,35 @@
         </div>
     </div>
 
+
+    <!-- 9. PROFESSIONAL ELECTIVE MODAL -->
+    <div id="pe-modal" class="modal">
+        <div class="modal-content glass-card pe-modal-content">
+            <button class="modal-close" onclick="closePEModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="settings-modal-header">
+                    <i class="fa-solid fa-book-open modal-settings-icon animated-icon"></i>
+                    <h3 class="result-title">Select Professional Elective</h3>
+                </div>
+                
+                <div class="pe-search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="pe-search-input" class="pe-search-input" placeholder="Search Professional Elective..." oninput="filterPEList()">
+                </div>
+
+                <div class="pe-list-container scrollable-area" id="pe-list-container">
+                    <!-- PE subject options will be dynamically injected here -->
+                </div>
+
+                <div class="pe-modal-footer">
+                    <button class="btn-cancel btn-ripple" onclick="closePEModal()">Cancel</button>
+                    <button class="btn-confirm btn-primary-gradient btn-ripple" id="btn-confirm-pe" onclick="confirmPESelection()" disabled>Confirm Selection</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
