@@ -1448,30 +1448,18 @@ function clearAllData() {
         localStorage.removeItem('saved_gpa');
         localStorage.removeItem('saved_cgpa');
         localStorage.removeItem('saved_credits');
-        localStorage.removeItem('saved_target_cgpa');
 
-        // Reset dashboard values to zero
-        document.getElementById('db-current-gpa').innerText = '0.00';
-        document.getElementById('db-current-cgpa').innerText = '0.00';
-        document.getElementById('db-completed-credits').innerText = '0.0';
-        document.getElementById('db-target-cgpa').value = '9.00';
+        // Reset settings display values
+        const dbGpa = document.getElementById('settings-saved-gpa');
+        const dbCgpa = document.getElementById('settings-saved-cgpa');
+        const dbCredits = document.getElementById('settings-saved-credits');
+        if (dbGpa) dbGpa.innerText = '0.00';
+        if (dbCgpa) dbCgpa.innerText = '0.00';
+        if (dbCredits) dbCredits.innerText = '0.0';
 
         showCustomAlert("Records Cleared", "All cached analytics and performance data have been successfully deleted.");
-        toggleSettingsModal();
     }
 }
-
-// Target CGPA modifier
-function updateTargetCGPA(val) {
-    const num = parseFloat(val);
-    if (!isNaN(num) && num >= 0 && num <= 10) {
-        localStorage.setItem('saved_target_cgpa', num.toFixed(2));
-    } else {
-        showCustomAlert("Input Range Error", "Target CGPA must lie between 0.00 and 10.00");
-        document.getElementById('db-target-cgpa').value = (parseFloat(localStorage.getItem('saved_target_cgpa')) || 9.00).toFixed(2);
-    }
-}
-
 
 // ==========================================================================
 // 3. UI GENERATION AND USER SELECTIONS
@@ -1491,14 +1479,49 @@ function selectRegulation(regulation) {
         return true;
     });
 
+    const getBranchIcon = (branchKey) => {
+        const icons = {
+            "cse": "fa-solid fa-laptop-code",
+            "aids": "fa-solid fa-brain",
+            "eee": "fa-solid fa-bolt",
+            "ece": "fa-solid fa-satellite-dish",
+            "civil": "fa-solid fa-building",
+            "mech": "fa-solid fa-gears"
+        };
+        return icons[branchKey] || "fa-solid fa-book";
+    };
+
+    const getBranchColor = (branchKey) => {
+        const colors = {
+            "cse": "#4361ee", // Blue
+            "aids": "#f72585", // Pink
+            "eee": "#f8961e", // Orange
+            "ece": "#4cc9f0", // Light Blue
+            "civil": "#ef233c", // Red
+            "mech": "#8ac926" // Green
+        };
+        return colors[branchKey] || "var(--accent)";
+    };
+
     branchesToShow.forEach(([key, val]) => {
         const card = document.createElement('button');
         card.className = 'select-card btn-ripple';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'row';
+        card.style.alignItems = 'center';
         card.onclick = () => selectBranch(key);
+        
+        const iconClass = getBranchIcon(key);
+        const iconColor = getBranchColor(key);
+
         card.innerHTML = `
-            <span class="card-title">${val}</span>
-            <span class="card-desc">Full course specifications for branch</span>
-            <i class="fa-solid fa-circle-chevron-right card-arrow"></i>
+            <div style="background: ${iconColor}15; color: ${iconColor}; width: 45px; height: 45px; min-width: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 1.25rem; border: 1px solid ${iconColor}40; box-shadow: 0 4px 10px ${iconColor}10;">
+                <i class="${iconClass}"></i>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; text-align: left; flex: 1;">
+                <span class="card-title" style="margin-bottom: 0;">${val}</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="color: var(--text-muted); font-size: 0.9rem; margin-left: auto;"></i>
         `;
         listContainer.appendChild(card);
     });
@@ -1648,12 +1671,13 @@ function calculateGPA() {
     const gpa = totalProduct / totalCredits;
     displayResult(gpa.toFixed(2), "Your GPA Score", getGPAFeedBack(gpa));
 
-    // Save outputs dynamically to dashboard & localStorage
+    // Save outputs to localStorage
     localStorage.setItem('saved_gpa', gpa.toFixed(2));
     localStorage.setItem('saved_credits', totalCredits.toFixed(1));
 
-    const dbGpa = document.getElementById('db-current-gpa');
-    const dbCredits = document.getElementById('db-completed-credits');
+    // Update Settings UI if it exists
+    const dbGpa = document.getElementById('settings-saved-gpa');
+    const dbCredits = document.getElementById('settings-saved-credits');
     if (dbGpa) animateValue(dbGpa, parseFloat(dbGpa.innerText) || 0, gpa, 700);
     if (dbCredits) animateValue(dbCredits, parseFloat(dbCredits.innerText) || 0, totalCredits, 700);
 }
@@ -1697,10 +1721,11 @@ function calculateCGPA() {
     const cgpa = totalGpaSum / counts;
     displayResult(cgpa.toFixed(2), "Your CGPA Rating", getCGPAFeedBack(cgpa));
 
-    // Save and map dynamics to Dashboard
+    // Save to localStorage
     localStorage.setItem('saved_cgpa', cgpa.toFixed(2));
 
-    const dbCgpa = document.getElementById('db-current-cgpa');
+    // Update Settings UI
+    const dbCgpa = document.getElementById('settings-saved-cgpa');
     if (dbCgpa) animateValue(dbCgpa, parseFloat(dbCgpa.innerText) || 0, cgpa, 700);
 }
 
@@ -1858,21 +1883,18 @@ function animateValue(obj, start, end, duration) {
 // Init Setup on Script load
 document.addEventListener('DOMContentLoaded', () => {
     // App relies on the original default theme.
-    // 2. Load Dashboard persisted states
+    // Load Dashboard persisted states to settings
     const savedGPA = parseFloat(localStorage.getItem('saved_gpa')) || 0.00;
     const savedCGPA = parseFloat(localStorage.getItem('saved_cgpa')) || 0.00;
     const savedCredits = parseFloat(localStorage.getItem('saved_credits')) || 0.0;
-    const savedTarget = parseFloat(localStorage.getItem('saved_target_cgpa')) || 9.00;
 
-    const dbGpa = document.getElementById('db-current-gpa');
-    const dbCgpa = document.getElementById('db-current-cgpa');
-    const dbCredits = document.getElementById('db-completed-credits');
-    const dbTarget = document.getElementById('db-target-cgpa');
+    const dbGpa = document.getElementById('settings-saved-gpa');
+    const dbCgpa = document.getElementById('settings-saved-cgpa');
+    const dbCredits = document.getElementById('settings-saved-credits');
 
     if (dbGpa) animateValue(dbGpa, 0, savedGPA, 800);
     if (dbCgpa) animateValue(dbCgpa, 0, savedCGPA, 800);
     if (dbCredits) animateValue(dbCredits, 0, savedCredits, 800);
-    if (dbTarget) dbTarget.value = savedTarget.toFixed(2);
 });
 
 // App Click Tap Ripple Action Listener
@@ -1898,15 +1920,3 @@ document.addEventListener('click', function (e) {
         ripple.remove();
     });
 });
-
-function debugAutofillGrades() {
-    const selects = document.querySelectorAll('.grade-select');
-    selects.forEach(select => {
-        for (let i = 0; i < select.options.length; i++) {
-            if (select.options[i].value !== "") {
-                select.selectedIndex = i;
-                break;
-            }
-        }
-    });
-}
