@@ -75,51 +75,30 @@
 
         <!-- 1. LANDING PAGE -->
         <section id="landing-page" class="page active">
-            <div class="welcome-container scrollable-area">
+            <div class="welcome-container">
                 <h1 class="welcome-text">Analyze Your <br><span class="gradient-text">Academic standing</span></h1>
                 <p class="subtitle">Compute, persist, and target your academic GPA & CGPA goals with app-like fluidity.
                 </p>
 
-                <!-- Premium Stats Dashboard -->
-                <div class="dashboard-wrapper animate-fade-up">
-                    <h3 class="dashboard-header-title">Student Dashboard</h3>
-                    <div class="dashboard-grid">
-                        <div class="dashboard-card glass-card">
-                            <div class="db-icon"><i class="fa-solid fa-award"></i></div>
-                            <div class="db-info">
-                                <span class="db-label">Current GPA</span>
-                                <span class="db-val" id="db-current-gpa">0.00</span>
-                            </div>
-                        </div>
-                        <div class="dashboard-card glass-card">
-                            <div class="db-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                            <div class="db-info">
-                                <span class="db-label">Current CGPA</span>
-                                <span class="db-val" id="db-current-cgpa">0.00</span>
-                            </div>
-                        </div>
-                        <div class="dashboard-card glass-card">
-                            <div class="db-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-                            <div class="db-info">
-                                <span class="db-label">Credits Done</span>
-                                <span class="db-val" id="db-completed-credits">0.0</span>
-                            </div>
-                        </div>
-                        <div class="dashboard-card glass-card target-card">
-                            <div class="db-icon"><i class="fa-solid fa-bullseye"></i></div>
-                            <div class="db-info">
-                                <span class="db-label">Target CGPA</span>
-                                <div class="target-edit-wrapper">
-                                    <input type="number" id="db-target-cgpa" class="target-input-field" min="0" max="10"
-                                        step="0.01" value="9.00" onchange="updateTargetCGPA(this.value)">
-                                    <i class="fa-solid fa-pen sub-edit-pencil"></i>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Hero Graphic Additions -->
+                <div class="hero-graphic-container animate-fade-up" style="margin: 2rem auto; position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                    <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, var(--accent), #ff79c6); border-radius: 50%; opacity: 0.25; filter: blur(22px); animation: pulse-blob 3s ease-in-out infinite alternate;"></div>
+                    
+                    <!-- Playful Particles -->
+                    <i class="fa-solid fa-star spark-1" style="position: absolute; top: 10px; left: 10px; color: #ffb703; font-size: 0.9rem; animation: sparkle 2s infinite ease-in-out alternate; z-index: 1;"></i>
+                    <i class="fa-solid fa-certificate spark-2" style="position: absolute; bottom: 20px; right: 10px; color: #e0aaff; font-size: 1.1rem; animation: sparkle 2.5s infinite ease-in-out alternate-reverse; z-index: 1;"></i>
+                    <i class="fa-solid fa-wand-magic-sparkles spark-3" style="position: absolute; top: 50px; left: -20px; color: #ff79c6; font-size: 1.3rem; animation: float-up-down 4s infinite ease-in-out; z-index: 1;"></i>
+                    
+                    <div class="hero-icon-circle glass-card" style="width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(157, 78, 221, 0.25); animation: float-up-down 4s ease-in-out infinite;">
+                        <i class="fa-solid fa-graduation-cap" style="font-size: 3.2rem; background: linear-gradient(135deg, #7b2cbf, #ff79c6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 3s ease-in-out infinite;"></i>
+                    </div>
+                    
+                    <div class="floating-badge glass-card" style="position: absolute; top: -8px; right: -28px; padding: 0.4rem 0.8rem; border-radius: 14px; font-size: 0.8rem; font-weight: 800; background: linear-gradient(135deg, rgba(157, 78, 221, 0.4), rgba(255, 121, 198, 0.4)); border: 1px solid rgba(255, 255, 255, 0.6); z-index: 3; animation: float-up-down 3.5s ease-in-out infinite reverse; box-shadow: 0 4px 15px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
+                        <i class="fa-solid fa-star" style="color: #ffb703; margin-right: 4px; animation: spin-slow 4s linear infinite;"></i> Elite
                     </div>
                 </div>
 
-                <div class="action-grid animate-fade-up" style="margin-top: 1.5rem;">
+                <div class="action-grid animate-fade-up" style="margin-top: 2.5rem;">
                     <button class="action-btn gpa-btn btn-ripple" onclick="navigateTo('regulation-page')">
                         <span class="btn-icon"><i class="fa-solid fa-calculator"></i></span>
                         <span class="btn-text">
@@ -141,7 +120,7 @@
 
                 <div class="home-footer-credits animate-fade-up"
                     style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; font-weight: 500; font-family: var(--font-primary); letter-spacing: 0.5px;">
-                    ✦ Created by Vels
+                    ✦ Created by R. Velselvam, B.E. (CSE),
                 </div>
             </div>
         </section>
@@ -149,10 +128,22 @@
         <!-- 2. REGULATION SELECTION -->
         <section id="regulation-page" class="page">
             <div class="selection-container">
-                <h2 class="section-title">Select <span class="gradient-text">Regulation</span></h2>
-                <p class="section-subtitle">Pick the curriculum regulation standard for your batch.</p>
+                <!-- Regulation Page Hero Graphic -->
+                <div class="hero-graphic-container animate-fade-up" style="margin: 1rem auto 1.5rem auto; position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
+                    <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, #00b4d8, #90e0ef); border-radius: 50%; opacity: 0.25; filter: blur(20px); animation: pulse-blob 3s ease-in-out infinite alternate-reverse;"></div>
+                    
+                    <i class="fa-solid fa-sparkles spark-1" style="position: absolute; top: 15px; right: 5px; color: #00b4d8; font-size: 1rem; animation: sparkle 2.5s infinite ease-in-out alternate; z-index: 1;"></i>
+                    <i class="fa-solid fa-book-bookmark spark-2" style="position: absolute; bottom: 10px; left: 0px; color: #90e0ef; font-size: 1.2rem; animation: float-up-down 3s infinite ease-in-out; z-index: 1; opacity: 0.6;"></i>
+                    
+                    <div class="hero-icon-circle glass-card" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(0, 180, 216, 0.25); animation: float-up-down 3.5s ease-in-out infinite reverse;">
+                        <i class="fa-solid fa-book-open" style="font-size: 2.2rem; background: linear-gradient(135deg, #023e8a, #00b4d8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 4s ease-in-out infinite;"></i>
+                    </div>
+                </div>
 
-                <div class="selection-list root-navigation-list">
+                <h2 class="section-title" style="text-align: center;">Select <span class="gradient-text">Regulation</span></h2>
+                <p class="section-subtitle" style="text-align: center;">Pick the curriculum regulation standard for your batch.</p>
+
+                <div class="selection-list root-navigation-list" style="margin-top: 1rem;">
                     <button class="select-card btn-ripple" onclick="selectRegulation('2021')">
                         <span class="card-title">Regulation 2021</span>
                         <span class="card-desc">Current semester curriculum standard for batches 2021-2024</span>
@@ -171,8 +162,20 @@
         <!-- 3. BRANCH SELECTION -->
         <section id="branch-page" class="page">
             <div class="selection-container">
-                <h2 class="section-title">Select <span class="gradient-text">Branch / Major</span></h2>
-                <p class="section-subtitle" id="branch-req-label">Regulation: --</p>
+                <!-- Branch Page Hero Graphic -->
+                <div class="hero-graphic-container animate-fade-up" style="margin: 1rem auto 1.5rem auto; position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
+                    <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, #f72585, #ffb703); border-radius: 50%; opacity: 0.25; filter: blur(20px); animation: pulse-blob 3.5s ease-in-out infinite alternate;"></div>
+                    
+                    <i class="fa-solid fa-code-branch spark-1" style="position: absolute; top: 15px; left: 5px; color: #f72585; font-size: 1rem; animation: sparkle 2s infinite ease-in-out alternate; z-index: 1;"></i>
+                    <i class="fa-solid fa-microchip spark-2" style="position: absolute; bottom: 15px; right: 0px; color: #ffb703; font-size: 1.2rem; animation: float-up-down 3.5s infinite ease-in-out; z-index: 1; opacity: 0.7;"></i>
+                    
+                    <div class="hero-icon-circle glass-card" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(247, 37, 133, 0.25); animation: float-up-down 4s ease-in-out infinite;">
+                        <i class="fa-solid fa-network-wired" style="font-size: 2rem; background: linear-gradient(135deg, #7209b7, #f72585); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 3.5s ease-in-out infinite alternate-reverse;"></i>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="text-align: center;">Select <span class="gradient-text">Branch / Major</span></h2>
+                <p class="section-subtitle" id="branch-req-label" style="text-align: center;">Regulation: --</p>
 
                 <div class="selection-list scrollable-area navigation-list" id="branch-list-container">
                     <!-- Branches will be dynamically populated here loaded from JS -->
@@ -183,8 +186,20 @@
         <!-- 4. SEMESTER SELECTION -->
         <section id="semester-page" class="page">
             <div class="selection-container">
-                <h2 class="section-title">Select <span class="gradient-text">Semester</span></h2>
-                <p class="section-subtitle" id="semester-info-label">Regulation / Branch</p>
+                <!-- Semester Page Hero Graphic -->
+                <div class="hero-graphic-container animate-fade-up" style="margin: 1rem auto 1.5rem auto; position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
+                    <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, #38b000, #9ef01a); border-radius: 50%; opacity: 0.25; filter: blur(20px); animation: pulse-blob 3.2s ease-in-out infinite alternate-reverse;"></div>
+                    
+                    <i class="fa-regular fa-calendar-check spark-1" style="position: absolute; top: 10px; right: 10px; color: #38b000; font-size: 1rem; animation: sparkle 2.2s infinite ease-in-out alternate; z-index: 1;"></i>
+                    <i class="fa-solid fa-hourglass-half spark-2" style="position: absolute; bottom: 10px; left: 10px; color: #9ef01a; font-size: 1.1rem; animation: float-up-down 2.8s infinite ease-in-out; z-index: 1; opacity: 0.8;"></i>
+                    
+                    <div class="hero-icon-circle glass-card" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(56, 176, 0, 0.25); animation: float-up-down 3.8s ease-in-out infinite reverse;">
+                        <i class="fa-solid fa-layer-group" style="font-size: 2.2rem; background: linear-gradient(135deg, #007200, #70e000); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 4.2s ease-in-out infinite;"></i>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="text-align: center;">Select <span class="gradient-text">Semester</span></h2>
+                <p class="section-subtitle" id="semester-info-label" style="text-align: center;">Regulation / Branch</p>
 
                 <div class="grid-list scrollable-area" id="semester-grid-container">
                     <!-- Semester 1 to 8 buttons -->
@@ -227,8 +242,20 @@
         <!-- 5. GPA CALCULATOR PAGE -->
         <section id="gpa-calc-page" class="page">
             <div class="calculator-container">
-                <h2 class="section-title">GPA <span class="gradient-text">Calculator</span></h2>
-                <p class="section-subtitle" id="gpa-info-label">Regulation / Branch / Semester</p>
+                <!-- GPA Page Hero Graphic -->
+                <div class="hero-graphic-container animate-fade-up" style="margin: 1rem auto 1.5rem auto; position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
+                    <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, #7209b7, #4cc9f0); border-radius: 50%; opacity: 0.25; filter: blur(20px); animation: pulse-blob 3.5s ease-in-out infinite alternate;"></div>
+                    
+                    <i class="fa-solid fa-calculator spark-1" style="position: absolute; top: 10px; left: 0px; color: #4cc9f0; font-size: 1rem; animation: sparkle 2.5s infinite ease-in-out alternate; z-index: 1;"></i>
+                    <i class="fa-solid fa-square-root-variable spark-2" style="position: absolute; bottom: 15px; right: -5px; color: #7209b7; font-size: 1.2rem; animation: float-up-down 3.2s infinite ease-in-out; z-index: 1; opacity: 0.8;"></i>
+                    
+                    <div class="hero-icon-circle glass-card" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(114, 9, 183, 0.25); animation: float-up-down 3.8s ease-in-out infinite reverse;">
+                        <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 2.2rem; background: linear-gradient(135deg, #4361ee, #4cc9f0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 4s ease-in-out infinite;"></i>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="text-align: center;">GPA <span class="gradient-text">Calculator</span></h2>
+                <p class="section-subtitle" id="gpa-info-label" style="text-align: center;">Regulation / Branch / Semester</p>
 
                 <!-- Scrollable subjects container -->
                 <div class="subjects-list scrollable-area" id="subjects-container">
@@ -236,12 +263,8 @@
                 </div>
 
                 <div class="calc-footer">
-                    <button class="btn-calculate btn-primary-gradient btn-ripple" onclick="calculateGPA()">
+                    <button class="btn-calculate btn-primary-gradient btn-ripple" onclick="calculateGPA()" style="width: 100%;">
                         <i class="fa-solid fa-circle-check"></i> Calculate GPA
-                    </button>
-                    <button class="btn-reset btn-ripple" onclick="debugAutofillGrades()"
-                        style="padding: 0.95rem 1.05rem;" title="Autofill (Debug)">
-                        <i class="fa-solid fa-magic"></i>
                     </button>
                 </div>
             </div>
@@ -250,8 +273,20 @@
         <!-- 6. CGPA CALCULATOR PAGE -->
         <section id="cgpa-page" class="page">
             <div class="calculator-container">
-                <h2 class="section-title">CGPA <span class="gradient-text">Calculator</span></h2>
-                <p class="section-subtitle">Enter your GPA for each semester to compute cumulative average.</p>
+                <!-- CGPA Page Hero Graphic -->
+                <div class="hero-graphic-container animate-fade-up" style="margin: 1rem auto 1.5rem auto; position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
+                    <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, #f77f00, #fcbf49); border-radius: 50%; opacity: 0.25; filter: blur(20px); animation: pulse-blob 3s ease-in-out infinite alternate;"></div>
+                    
+                    <i class="fa-solid fa-arrow-trend-up spark-1" style="position: absolute; top: 10px; left: -5px; color: #f77f00; font-size: 1rem; animation: sparkle 2s infinite ease-in-out alternate; z-index: 1;"></i>
+                    <i class="fa-solid fa-award spark-2" style="position: absolute; bottom: 15px; right: 0px; color: #fcbf49; font-size: 1.2rem; animation: float-up-down 3.5s infinite ease-in-out; z-index: 1; opacity: 0.8;"></i>
+                    
+                    <div class="hero-icon-circle glass-card" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(247, 127, 0, 0.25); animation: float-up-down 4s ease-in-out infinite;">
+                        <i class="fa-solid fa-chart-pie" style="font-size: 2.2rem; background: linear-gradient(135deg, #d62828, #f77f00); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 3.5s ease-in-out infinite alternate-reverse;"></i>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="text-align: center;">CGPA <span class="gradient-text">Calculator</span></h2>
+                <p class="section-subtitle" style="text-align: center;">Enter your GPA for each semester to compute cumulative average.</p>
 
                 <!-- Scrollable GPAs container with floating labels -->
                 <div class="cgpa-inputs-grid scrollable-area">
@@ -359,13 +394,18 @@
                 <p class="result-message">Configure theme controls and clear local analytics.</p>
 
                 <div class="settings-options-list">
-
-
-                    <div class="settings-option-item glass-card">
-                        <span class="opt-label"><i class="fa-solid fa-database"></i> Local Data</span>
-                        <button class="btn-danger-clear btn-ripple" onclick="clearAllData()">
-                            <i class="fa-solid fa-trash-can"></i> Reset Records
-                        </button>
+                    <div class="settings-option-item glass-card" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="opt-label"><i class="fa-solid fa-database"></i> Saved Academic Data</span>
+                            <button class="btn-danger-clear btn-ripple" onclick="clearAllData()">
+                                <i class="fa-solid fa-trash-can"></i> Clear Data
+                            </button>
+                        </div>
+                        <div class="saved-data-display" style="width: 100%; display: flex; justify-content: space-around; font-size: 0.9rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color);">
+                            <div><strong>GPA:</strong> <span id="settings-saved-gpa">0.00</span></div>
+                            <div><strong>CGPA:</strong> <span id="settings-saved-cgpa">0.00</span></div>
+                            <div><strong>Credits:</strong> <span id="settings-saved-credits">0.0</span></div>
+                        </div>
                     </div>
                 </div>
 
