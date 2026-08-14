@@ -34,7 +34,7 @@
                 <i class="fa-solid fa-graduation-cap header-logo-icon"></i>
                 <span class="app-title">Gradify</span>
             </div>
-            <span class="active-page-title" id="active-page-title">Home</span>
+            <span class="active-page-title" id="active-page-title"><i class="fa-solid fa-house"></i></span>
         </header>
 
         <!-- Slide-in Mobile Menu -->
@@ -120,7 +120,7 @@
 
                 <div class="home-footer-credits animate-fade-up"
                     style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; font-weight: 500; font-family: var(--font-primary); letter-spacing: 0.5px;">
-                    ✦ Created by R. Velselvam, B.E. (CSE),
+                    🖥️ Created by R. Velselvam, B.E. (CSE),
                 </div>
             </div>
         </section>
@@ -375,6 +375,11 @@
                 </div>
                 <h3 class="result-title" id="modal-result-title">Your GPA</h3>
                 <p class="result-message" id="modal-result-msg">Excellent performance! Keep it up.</p>
+                
+                <div id="cgpa-chart-container" class="cgpa-chart-container">
+                    <canvas id="cgpaChart"></canvas>
+                </div>
+                
                 <button class="btn-done btn-primary-gradient btn-ripple" onclick="closeModal()">Awesome!</button>
             </div>
         </div>
@@ -404,7 +409,6 @@
                         <div class="saved-data-display" style="width: 100%; display: flex; justify-content: space-around; font-size: 0.9rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color);">
                             <div><strong>GPA:</strong> <span id="settings-saved-gpa">0.00</span></div>
                             <div><strong>CGPA:</strong> <span id="settings-saved-cgpa">0.00</span></div>
-                            <div><strong>Credits:</strong> <span id="settings-saved-credits">0.0</span></div>
                         </div>
                     </div>
                 </div>
@@ -445,6 +449,36 @@
         </div>
     </div>
 
+    <!-- 10. OPEN ELECTIVE MODAL -->
+    <div id="oe-modal" class="modal">
+        <div class="modal-content glass-card pe-modal-content">
+            <button class="modal-close" onclick="closeOEModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="settings-modal-header">
+                    <i class="fa-solid fa-globe modal-settings-icon animated-icon"></i>
+                    <h3 class="result-title">Select Open Elective</h3>
+                </div>
+                
+                <div class="pe-search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="oe-search-input" class="pe-search-input" placeholder="Search Open Elective..." oninput="filterOEList()">
+                </div>
+
+                <div class="pe-list-container scrollable-area" id="oe-list-container">
+                    <!-- OE subject options will be dynamically injected here -->
+                </div>
+
+                <div class="pe-modal-footer">
+                    <button class="btn-cancel btn-ripple" onclick="closeOEModal()">Cancel</button>
+                    <button class="btn-confirm btn-primary-gradient btn-ripple" id="btn-confirm-oe" onclick="confirmOESelection()" disabled>Confirm Selection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 
