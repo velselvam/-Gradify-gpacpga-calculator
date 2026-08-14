@@ -1083,130 +1083,125 @@ const state = {
 };
 
 const PE_SUBJECTS_CSE = [
-    "Exploratory Data Analysis", "Recommender Systems", "Neural Networks and Deep Learning", 
-    "Text and Speech Analysis", "Business Analytics", "Image and Video Analytics", 
-    "Computer Vision", "Big Data Analytics", "Web Technologies", "App Development", 
-    "Cloud Services Management", "UI and UX Design", "Software Testing and Automation", 
-    "Web Application Security", "DevOps", "Principles of Programming Languages", 
-    "Cloud Computing", "Virtualization", "Data Warehousing", "Storage Technologies", 
-    "Software Defined Networks", "Stream Processing", "Security and Privacy in Cloud", 
-    "Ethical Hacking", "Digital and Mobile Forensics", "Social Network Security", 
-    "Modern Cryptography", "Engineering Secure Software Systems", "Cryptocurrency and Blockchain Technologies", 
-    "Network Security", "Augmented Reality/Virtual Reality", "Multimedia and Animation", 
-    "Video Creation and Editing", "Digital marketing", "Visual Effects", "Game Development", 
-    "Multimedia Data Compression and Storage", "Robotic Process Automation", "Cyber security", 
-    "Quantum Computing", "3D Printing and Design", "Knowledge Engineering", "Soft Computing", 
-    "Optimization Techniques", "Game Theory", "Cognitive Science", "Ethics And AI"
+    "CCS346 - Exploratory Data Analysis", "CCS360 - Recommender Systems", "CCS355 - Neural Networks and Deep Learning", 
+    "CCS369 - Text and Speech Analysis", "CCW331 - Business Analytics", "CCS349 - Image and Video Analytics", 
+    "CCS338 - Computer Vision", "CCS334 - Big Data Analytics", "CCS375 - Web Technologies", "CCS332 - App Development", 
+    "CCS336 - Cloud Services Management", "CCS370 - UI and UX Design", "CCS366 - Software Testing and Automation", 
+    "CCS374 - Web Application Security", "CCS342 - DevOps", "CCS358 - Principles of Programming Languages", 
+    "CCS335 - Cloud Computing", "CCS372 - Virtualization", "CCS341 - Data Warehousing", "CCS367 - Storage Technologies", 
+    "CCS365 - Software Defined Networks", "CCS368 - Stream Processing", "CCS362 - Security and Privacy in Cloud", 
+    "CCS344 - Ethical Hacking", "CCS343 - Digital and Mobile Forensics", "CCS363 - Social Network Security", 
+    "CCS351 - Modern Cryptography", "CB3591 - Engineering Secure Software Systems", "CCS339 - Cryptocurrency and Blockchain Technologies", 
+    "CCS354 - Network Security", "CCS333 - Augmented Reality/Virtual Reality", "CCS352 - Multimedia and Animation", 
+    "CCS371 - Video Creation and Editing", "CCW332 - Digital Marketing", "CCS373 - Visual Effects", "CCS347 - Game Development", 
+    "CCS353 - Multimedia Data Compression and Storage", "CCS361 - Robotic Process Automation", "CCS340 - Cyber Security", 
+    "CCS359 - Quantum Computing", "CCS331 - 3D Printing and Design", "CCS350 - Knowledge Engineering", "CCS364 - Soft Computing", 
+    "CCS357 - Optimization Techniques", "CCS348 - Game Theory", "CCS337 - Cognitive Science", "CCS345 - Ethics And AI"
 ];
 
 const PE_SUBJECTS_ECE = [
-    "Wide Bandgap Devices", "Validation and Testing Technology", "Low Power IC Design", 
-    "VLSI Testing and Design For Testability", "Mixed Signal IC Design Testing", "Analog IC Design", 
-    "Advanced Digital Signal Processing", "Image Processing", "Speech Processing", "Software Defined Radio", 
-    "DSP Architecture and Programming", "Computer Vision", "RF Transceivers", "Signal Integrity", 
-    "Antenna Design", "MICs and RF System Design", "EMI/EMC Pre Compliance Testing", 
-    "RF ID System Design & Testing", "Wearable Devices", "Human Assist Devices", "Therapeutic Equipment", 
-    "Medical Imaging Systems", "Brain Computer Interface and Applications", "Body Area Networks", 
-    "Underwater Instrumentation System", "Underwater Imaging Systems and Image Processing", 
-    "Underwater Communication", "Ocean Observation Systems", "Underwater Navigation Systems", 
-    "Ocean Acoustics", "IoT Processors", "IoT Based System Design", "Wireless Sensor Network Design", 
-    "Industrial IoT and Industry 4.0", "MEMS Design", "Fundamentals of Nanoelectronics", 
-    "Radar Technologies", "Avionics Systems", "Positioning and Navigation Systems", "Satellite Communication", 
-    "Remote Sensing", "Rocketry and Space Mechanics", "Optical Communication & Networks", 
-    "Wireless Broad Band Networks", "4G/5G Communication Networks", "Software Defined Networks", 
-    "Massive MIMO Networks", "Advanced Wireless Communication Techniques"
+    "CEC363 - Wide Bandgap Devices", "CEC361 - Validation and Testing Technology", "CEC370 - Low Power IC Design", 
+    "CEC362 - VLSI Testing and Design For Testability", "CEC342 - Mixed Signal IC Design Testing", "CEC334 - Analog IC Design", 
+    "CEC332 - Advanced Digital Signal Processing", "CEC366 - Image Processing", "CEC356 - Speech Processing", "CEC355 - Software Defined Radio", 
+    "CEC337 - DSP Architecture and Programming", "CCS338 - Computer Vision", "CEC350 - RF Transceivers", "CEC353 - Signal Integrity", 
+    "CEC335 - Antenna Design", "CEC341 - MICs and RF System Design", "CEC338 - EMI/EMC Pre Compliance Testing", 
+    "CEC349 - RFID System Design and Testing", "CBM370 - Wearable Devices", "CBM352 - Human Assist Devices", "CBM368 - Therapeutic Equipment", 
+    "CBM355 - Medical Imaging Systems", "CBM342 - Brain Computer Interface and Applications", "CBM341 - Body Area Networks", 
+    "CEC359 - Underwater Instrumentation System", "CEC358 - Underwater Imaging Systems and Image Processing", 
+    "CEC357 - Underwater Communication", "CEC344 - Ocean Observation Systems", "CEC360 - Underwater Navigation Systems", 
+    "CEC343 - Ocean Acoustics", "CEC369 - IoT Processors", "CEC368 - IoT Based Systems Design", "CEC365 - Wireless Sensor Network Design", 
+    "CEC367 - Industrial IoT and Industry 4.0", "CEC340 - MEMS Design", "CEC339 - Fundamentals of Nanoelectronics", 
+    "CEC347 - Radar Technologies", "CEC336 - Avionics Systems", "CEC346 - Positioning and Navigation Systems", "CEC352 - Satellite Communication", 
+    "CEC348 - Remote Sensing", "CEC351 - Rocketry and Space Mechanics", "CEC345 - Optical Communication & Networks", 
+    "CEC364 - Wireless Broad Band Networks", "CEC331 - 4G/5G Communication Networks", "CEC354 - Software Defined Networks", 
+    "CEC371 - Massive MIMO Networks", "CEC333 - Advanced Wireless Communication Techniques"
 ];
 
 const PE_SUBJECTS_EEE = [
-    "Utilization and Conservation of Electrical Energy", "Under Ground Cable Engineering", 
-    "Substation Engineering and Automation", "HVDC and FACTS", "Energy Management and Auditing", 
-    "Power Quality", "Smart Grids", "Restructured Power Market", "Special Electrical Machines", 
-    "Analysis of Electrical Machines", "Multilevel Power Converters", "Electrical Drives", 
-    "SMPS and UPS", "Power Electronics for Renewable Energy Systems", "Control of Power Electronics Circuits", 
-    "Embedded System Design", "Embedded C-Programming", "Embedded Processors", 
-    "Embedded Control for Electric Drives", "Smart System Automation", 
-    "Embedded System for Automotive Applications", "VLSI Design", "MEMS and NEMS", 
-    "Digital Signal Processing System Design", "Electric Vehicle Architecture", 
-    "Design of Motor and Power Converters for Electric Vehicles", 
-    "Electric Vehicle Design, Mechanics and Control", "Design of Electric Vehicle Charging System", 
-    "Testing of Electric Vehicles", "Grid Integration of Electric Vehicles", 
-    "Intelligent control of Electric Vehicles", "Process Modeling and Simulation", 
-    "Computer Control of Processes", "System Identification", "Model Based Control", 
-    "Non Linear Control", "Optimal Control", "Adaptive Control", "Machine Monitoring System", 
-    "Energy Storage Systems", "Hybrid Energy Technology", "Design and Modelling of Renewable Energy Systems", 
-    "Grid integrating Techniques and Challenges", "Sustainable and Environmental Friendly HV Insulation System", 
-    "Power System Transients", "PLC Programming", "Big Data Analytics"
+    "CCS334 - Big Data Analytics", "CEI331 - PLC Programming", "CIC331 - Process Modeling and Simulation", 
+    "CIC332 - Computer Control of Processes", "CIC333 - System Identification", "CIC334 - Non Linear Control", 
+    "CIC335 - Adaptive Control", "CIC336 - Model Based Control", "CIC337 - Optimal Control", "CIC338 - Machine Monitoring System", 
+    "EE3001 - Utilization and Conservation of Electrical Energy", "EE3002 - Under Ground Cable Engineering", 
+    "EE3003 - Substation Engineering and Automation", "EE3004 - HVDC and FACTS", "EE3005 - Energy Management and Auditing", 
+    "EE3006 - Power Quality", "EE3007 - Smart Grid", "EE3008 - Restructured Power Market", "EE3009 - Special Electrical Machines", 
+    "EE3010 - Analysis of Electrical Machines", "EE3011 - Multilevel Power Converters", "EE3012 - Electrical Drives", 
+    "EE3013 - SMPS and UPS", "EE3014 - Power Electronics for Renewable Energy Systems", "EE3015 - Control of Power Electronics Circuits", 
+    "EE3016 - Embedded System Design", "EE3017 - Embedded C-programming", "EE3018 - Embedded Processors", 
+    "EE3019 - Embedded Control for Electric Drives", "EE3020 - Smart System Automation", "EE3021 - Embedded System for Automotive Applications", 
+    "EE3022 - VLSI Design", "EE3023 - MEMS and NEMS", "EE3024 - Digital Signal Processing System Design", 
+    "EE3025 - Electric Vehicle Architecture", "EE3026 - Design of Motor and Power Converters for Electric Vehicles", 
+    "EE3027 - Electric Vehicle Design, Mechanics and Control", "EE3028 - Design of Electric Vehicle Charging System", 
+    "EE3029 - Testing of Electric Vehicles", "EE3030 - Grid Integration of Electric Vehicles", "EE3031 - Intelligent Control of Electric Vehicles", 
+    "EE3032 - Energy Storage Systems", "EE3033 - Hybrid Energy Technology", "EE3034 - Design and Modeling of Renewable Energy Systems", 
+    "EE3035 - Grid integrating Techniques and Challenges", "EE3036 - Sustainable and Environmental Friendly HV Insulation System", 
+    "EE3037 - Power System Transients"
 ];
 
 const PE_SUBJECTS_MECH = [
-    "Automotive Materials, Components, Design & Testing", "Conventional and Futuristic Vehicle Technology", 
-    "Renewable Powered Off Highway Vehicles and Emission Control Technology", "Vehicle Health Monitoring, Maintenance and Safety", 
-    "CAE and CFD Approach in Future Mobility", "Hybrid and Electric Vehicle Technology", "Thermal Management of Batteries and Fuel Cells", 
-    "Value Engineering", "Additive Manufacturing", "CAD/CAM", "Design For X", "Ergonomics in Design", 
-    "New Product Development", "Product Life Cycle Management", "Sensors and Instrumentation", 
-    "Electrical Drives and Actuators", "Embedded Systems and Programming", "Robotics", 
-    "Smart Mobility and Intelligent Vehicles", "Haptics and Immersive Technologies", "Drone Technologies", 
-    "Digital Manufacturing and IoT", "Lean Manufacturing", "Modern Robotics", "Green Manufacturing Design and Practices", 
-    "Environment and Sustainability Impact Assessment", "Energy Saving Machinery and Components", "Green Supply Chain Management", 
-    "Design of Pressure Vessels", "Failure Analysis and NDT Techniques", "Material Handling and solid processing Equipment", 
-    "Rotating Machinery Design", "Thermal and Fired Equipment design", "Industrial Layout Design and Safety", 
-    "Design Codes and Standards", "Bioenergy Conversion Technologies", "Carbon Footprint estimation and reduction techniques", 
-    "Energy Conservation in Industries", "Energy Efficient Buildings", "Energy Storage Devices", 
-    "Renewable Energy Technologies", "Equipment for Pollution Control", "Computational Solid Mechanics", 
-    "Computational Fluid Dynamics and Heat transfer", "Theory on Computation and Visualization", 
-    "Computational Bio-Mechanics", "Advanced Statistics and Data Analytics", "CAD and CAE", 
-    "Machine Learning for Intelligent Systems", "Automobile Engineering", "Measurements and Controls", 
-    "Design Concepts in Engineering", "Composite Materials and Mechanics", "Electrical Drives and Control", 
-    "Power Plant Engineering", "Refrigeration and Air Conditioning", "Dynamics of Ground Vehicles", 
-    "Turbo Machines", "Non-traditional Machining Processes", "Industrial safety", "Design of Transmission System", 
-    "Thermal Power Engineering", "Design for Manufacturing", "Power Generation Equipment Design", 
-    "Advanced Vehicle Engineering", "Advanced Internal Combustion Engineering", "Casting and Welding Processes", 
-    "Process Planning and Cost Estimation", "Surface Engineering", "Precision Manufacturing", 
-    "Gas Dynamics and Jet Propulsion", "Operational Research"
+    "CAE353 - Turbo Machines", "CAU332 - Dynamics of Ground Vehicles", "CME331 - Automotive Materials, Components, Design and Testing", 
+    "CME332 - Conventional and Futuristic Vehicle Technology", "CME333 - Renewable Powered Off Highway Vehicles and Emission Control Technology", "CME334 - Vehicle Health Monitoring, Maintenance and Safety", 
+    "CME335 - CAE and CFD Approach in Future Mobility", "CME336 - Hybrid and Electric Vehicle Technology", "CME337 - Thermal Management of Batteries and Fuel Cells", 
+    "CME338 - Value Engineering", "CME339 - Additive Manufacturing", "CME340 - CAD/CAM", 
+    "CME341 - Design For X", "CME342 - Ergonomics in Design", "CME343 - New Product Development", 
+    "CME344 - Product Life Cycle Management", "CME345 - Haptics and Immersive Technologies", "CME346 - Digital Manufacturing and IoT", 
+    "CME347 - Lean Manufacturing", "CME348 - Modern Robotics", "CME349 - Green Manufacturing Design and Practices", 
+    "CME350 - Environment Sustainability and Impact Assessment", "CME351 - Energy Saving Machinery and Components", "CME352 - Green Supply Chain Management", 
+    "CME353 - Design of Pressure Vessels", "CME354 - Failure Analysis and NDT Techniques", "CME355 - Material Handling and Solid Processing Equipment", 
+    "CME356 - Rotating Machinery Design", "CME357 - Thermal and Fired Equipment Design", "CME358 - Industrial Layout Design and Safety", 
+    "CME359 - Design Codes and Standards", "CME360 - Bioenergy Conversion Technologies", "CME361 - Carbon Footprint Estimation and Reduction Techniques", 
+    "CME362 - Energy Conservation in Industries", "CME363 - Energy Efficient Buildings", "CME364 - Energy Storage Devices", 
+    "CME365 - Renewable Energy Technologies", "CME366 - Equipment for Pollution Control", "CME367 - Computational Solid Mechanics", 
+    "CME368 - Computational Fluid Dynamics and Heat Transfer", "CME369 - Theory on Computation and Visualization", "CME370 - Computational Bio-Mechanics", 
+    "CME371 - Advanced Statistics and Data Analytics", "CME372 - CAD and CAE", "CME380 - Automobile Engineering", 
+    "CME381 - Design Concepts in Engineering", "CME382 - Composite Materials and Mechanics", "CME383 - Electrical Drives and Control", 
+    "CME384 - Power Plant Engineering", "CME385 - Refrigeration and Air Conditioning", "CME386 - Gas Dynamics and Jet Propulsion", 
+    "CME387 - Non-traditional Machining Processes", "CME388 - Industrial Safety", "CME389 - Design of Transmission System", 
+    "CME390 - Thermal Power Engineering", "CME391 - Design for Manufacturing", "CME392 - Power Generation Equipment Design", 
+    "CME393 - Advanced Vehicle Engineering", "CME394 - Advanced Internal Combustion Engineering", "CME395 - Casting and Welding Processes", 
+    "CME396 - Process Planning and Cost Estimation", "CME397 - Surface Engineering", "CME398 - Precision Manufacturing", 
+    "CME399 - Operational Research", "CMR338 - Smart Mobility and Intelligent Vehicles", "CRA332 - Drone Technologies", 
+    "CRA342 - Machine Learning for Intelligent Systems", "ME3001 - Measurements and Controls", "MR3392 - Electrical Drives and Actuators", 
+    "MR3491 - Sensors and Instrumentation", "MR3492 - Embedded Systems and Programming", "MR3691 - Robotics"
 ];
 
 const PE_SUBJECTS_CIVIL = [
-    "Concrete Structures", "Steel Structures", "Prefabricated Structures", 
-    "Prestressed Concrete Structures", "Rehabilitation/Heritage Restoration", 
-    "Dynamics and Earthquake Resistant Structures", "Introduction to Finite Element Method", 
-    "Formwork Engineering", "Construction Equipment and Machinery", 
-    "Sustainable Construction and Lean Construction", "Digitalized Construction Lab", 
-    "Construction Management and Safety", "Advanced Construction Techniques", 
-    "Energy Efficient Buildings", "Geo-Environmental Engineering", "Ground Improvement Techniques", 
-    "Soil Dynamics and Machine Foundations", "Rock Mechanics", "Earth and Earth Retaining Structures", 
-    "Pile Foundation", "Tunneling Engineering", "Total Station and GPS Surveying", 
-    "Remote Sensing Concepts", "Satellite Image Processing", "Cartography and GIS", 
-    "Photogrammetry", "Airborne and Terrestrial laser mapping", "Hydrographic Surveying", 
-    "Airports and Harbours", "Traffic Engineering and Management", "Urban Planning and Development", 
-    "Smart cities", "Intelligent Transportation Systems", "Pavement Engineering", 
-    "Transportation planning Process", "Climate Change Adaptation and Mitigation", 
-    "Air and Noise Pollution Control Engineering", "Environmental Impact Assessment", 
-    "Industrial Wastewater Management", "Solid and Hazardous Waste Management", 
-    "Environmental Policy and Legislations", "Environment, Health and Safety", 
-    "Irrigation Engineering and Drawing", "Groundwater Engineering", "Water Resources Systems Engineering", 
-    "Watershed Conservation and Management", "Integrated Water Resources Management", 
-    "Urban Water Infrastructure", "Water Quality and Management", "Ocean Wave Dynamics", 
-    "Marine Geotechnical Engineering", "Coastal Engineering", "Offshore Structures", 
-    "Port and Harbour Engineering", "Coastal Hazards and Mitigation", 
-    "Coastal Zone Management and Remote Sensing", "Steel Concrete Composite Structures", 
-    "Finance For Engineers", "Earth and Rockfill Dams", "Computational Fluid Dynamics", 
-    "Rainwater Harvesting", "Transport and Environment", "Environmental quality Monitoring"
+    "CCE331 - Air and Noise Pollution Control Engineering", "CCE332 - Environmental Health and Safety", "CCE333 - Environmental Impact Assessment", 
+    "CCE334 - Industrial Wastewater Management", "CE3001 - Concrete Structures", "CE3002 - Steel Structures", 
+    "CE3003 - Prefabricated Structures", "CE3004 - Prestressed Concrete Structures", "CE3005 - Rehabilitation/Heritage Restoration", 
+    "CE3006 - Dynamics and Earthquake Resistant Structures", "CE3007 - Introduction to Finite Element Method", "CE3008 - Formwork Engineering", 
+    "CE3009 - Construction Equipment and Machinery", "CE3010 - Sustainable Construction And Lean Construction", "CE3011 - Digitalized Construction Lab", 
+    "CE3012 - Construction Management and Safety", "CE3013 - Advanced Construction Techniques", "CE3014 - Energy Efficient Buildings", 
+    "CE3015 - Geoenvironmental Engineering", "CE3016 - Ground Improvement Techniques", "CE3017 - Soil Dynamics and Machine Foundations", 
+    "CE3018 - Rock Mechanics", "CE3019 - Earth and Earth Retaining Structures", "CE3020 - Pile Foundation", 
+    "CE3021 - Tunneling Engineering", "CE3022 - Remote Sensing Concepts", "CE3023 - Satellite Image Processing", 
+    "CE3024 - Hydrographic Surveying", "CE3025 - Airports and Harbours", "CE3026 - Traffic Engineering and Management", 
+    "CE3027 - Urban Planning and Development", "CE3028 - Smart Cities", "CE3029 - Intelligent Transport Systems", 
+    "CE3030 - Pavement Engineering", "CE3031 - Transportation Planning Process", "CE3032 - Climate Change Adaptation and Mitigation", 
+    "CE3033 - Solid and Hazardous Waste Management", "CE3034 - Environmental Policy and Legislations", "CE3035 - Participatory Water Resources Management", 
+    "CE3036 - Ground Water Engineering", "CE3037 - Water Resources Systems Engineering", "CE3038 - Watershed Conservation and Management", 
+    "CE3039 - Integrated Water Resources Management", "CE3040 - Urban Water Infrastructure", "CE3041 - Water Quality and Management", 
+    "CE3042 - Ocean Wave Dynamics", "CE3043 - Marine Geotechnical Engineering", "CE3044 - Coastal Engineering", 
+    "CE3045 - Offshore Structures", "CE3046 - Port and Harbour Engineering", "CE3047 - Coastal Hazards and Mitigation", 
+    "CE3048 - Coastal Zone Management and Remote Sensing", "CE3049 - Steel Concrete Composite Structures", "CE3050 - Finance for Engineers", 
+    "CE3051 - Earth and Rockfill Dams", "CE3052 - Computational Fluid Dynamics", "CE3053 - Rainwater Harvesting", 
+    "CE3054 - Transport and Environment", "CE3055 - Environmental Quality Monitoring", "GI3391 - Photogrammetry", 
+    "GI3491 - Cartography and GIS", "GI3492 - Total Station and GPS Surveying", "GI3691 - Airborne and Terrestrial Laser Mapping"
 ];
 
 const PE_SUBJECTS_AIDS = [
-    "Knowledge Engineering", "Recommender Systems", "Soft Computing", "Text and Speech Analysis", 
-    "Business Analytics", "Image and video analytics", "Computer Vision", "Big Data Analytics", 
-    "Cloud Computing", "App Development", "Cloud Services Management", "UI and UX Design", 
-    "Software Testing and Automation", "Web Application Security", "DevOps", "Principles of Programming Languages", 
-    "Virtualization", "Data Warehousing", "Storage Technologies", "Software Defined Networks", 
-    "Stream Processing", "Security and Privacy in Cloud", "Ethical Hacking", "Digital and Mobile Forensics", 
-    "Social Network Security", "Modern Cryptography", "Engineering Secure Software Systems", 
-    "Cryptocurrency and Blockchain Technologies", "Network Security", "Augmented Reality/Virtual Reality", 
-    "Multimedia and Animation", "Video Creation and Editing", "Digital marketing", 
-    "Multimedia Data Compression and Storage", "Game Development", "Visual Effects", 
-    "Robotic Process Automation", "Neural Networks and Deep Learning", "Cyber Security", 
-    "Quantum Computing", "3D Printing and Design", "Bio-Inspired Optimization Techniques", 
-    "Health Care Analytics", "Optimization Techniques", "Game Theory", "Cognitive Science", "Ethics and AI"
+    "CCS350 - Knowledge Engineering", "CCS360 - Recommender Systems", "CCS364 - Soft Computing", "CCS369 - Text and Speech Analysis", 
+    "CCW331 - Business Analytics", "CCS349 - Image and Video Analytics", "CCS338 - Computer Vision", "CCS334 - Big Data Analytics", 
+    "CCS335 - Cloud Computing", "CCS332 - App Development", "CCS336 - Cloud Services Management", "CCS370 - UI and UX Design", 
+    "CCS366 - Software Testing and Automation", "CCS374 - Web Application Security", "CCS342 - DevOps", "CCS358 - Principles of Programming Languages", 
+    "CCS372 - Virtualization", "CCS341 - Data Warehousing", "CCS367 - Storage Technologies", "CCS365 - Software Defined Networks", 
+    "CCS368 - Stream Processing", "CCS362 - Security and Privacy in Cloud", "CCS344 - Ethical Hacking", "CCS343 - Digital and Mobile Forensics", 
+    "CCS363 - Social Network Security", "CCS351 - Modern Cryptography", "CB3591 - Engineering Secure Software Systems", 
+    "CCS339 - Cryptocurrency and Blockchain Technologies", "CCS354 - Network Security", "CCS333 - Augmented Reality/Virtual Reality", 
+    "CCS352 - Multimedia and Animation", "CCS371 - Video Creation and Editing", "CCW332 - Digital Marketing", 
+    "CCS353 - Multimedia Data Compression and Storage", "CCS347 - Game Development", "CCS373 - Visual Effects", 
+    "CCS361 - Robotic Process Automation", "CCS355 - Neural Networks and Deep Learning", "CCS340 - Cyber Security", 
+    "CCS359 - Quantum Computing", "CCS331 - 3D Printing and Design", "AD3001 - Bio-Inspired Optimization Techniques", 
+    "AD3002 - Health Care Analytics", "CCS357 - Optimization Techniques", "CCS348 - Game Theory", "CCS337 - Cognitive Science", "CCS345 - Ethics and AI"
 ];
 
 const PE_SUBJECTS_2025_AIDS = [
@@ -1297,17 +1292,243 @@ const PE_SUBJECTS_2025_CIVIL = [
     "Offshore structures"
 ];
 
+const OE_SUBJECTS_CSE = [
+    "AI3021 - IT in Agricultural System", "AU3002 - Batteries and Management System", "AU3008 - Sensors and Actuators", 
+    "AU3791 - Electric and Hybrid Vehicles", "CBM333 - Assistive Technology", "CBM348 - Foundation Skills in Integrated Product Development", 
+    "CME343 - New Product Development", "CME365 - Renewable Energy Technologies", "CPE334 - Energy Conservation and Management", 
+    "CRA332 - Drone Technologies", "FT3201 - Fibre Science", "MF3003 - Reverse Engineering", 
+    "MF3010 - Micro and Precision Engineering", "MV3501 - Marine Propulsion", "OAE351 - Aviation Management", 
+    "OAE352 - Fundamentals of Aeronautical Engineering", "OAI351 - Urban Agriculture", "OAI352 - Agriculture Entrepreneurship Development", 
+    "OAS351 - Space Science", "OAS352 - Space Engineering", "OAS353 - Space Vehicles", 
+    "OBT351 - Food, Nutrition and Health", "OBT352 - Basics of Microbial Technology", "OBT353 - Basics of Biomolecules", 
+    "OBT354 - Fundamentals of Cell and Molecular Biology", "OCE351 - Environmental and Social Impact Assessment", 
+    "OCE353 - Lean Concepts, Tools and Practices", "OCH351 - Nano Technology", "OCH352 - Functional Materials", 
+    "OCH353 - Energy Technology", "OCH354 - Surface Science", "OEC351 - Signals and Systems", 
+    "OEC352 - Fundamentals of Electronic Devices and Circuits", "OEE351 - Renewable Energy System", 
+    "OEE352 - Electric Vehicle Technology", "OEE353 - Introduction to Control Systems", "OEI351 - Introduction to Industrial Instrumentation and Control", 
+    "OEI352 - Introduction to Control Engineering", "OEI353 - Introduction to PLC Programming", "OEI354 - Introduction to Industrial Automation Systems", 
+    "OEN351 - Drinking Water Supply and Treatment", "OEN352 - Biodiversity Conservation", "OFD351 - Holistic Nutrition", 
+    "OFD352 - Traditional Indian Foods", "OFD353 - Introduction to Food Processing", "OFD354 - Fundamentals of Food Engineering", 
+    "OFD355 - Food Safety and Quality Regulations", "OGI351 - Remote Sensing Concepts", "OGI352 - Geographical Information System", 
+    "OHS351 - English for Competitive Examinations", "OHS352 - Project Report Writing", "OIE351 - Introduction to Industrial Engineering", 
+    "OIE352 - Resource Management Techniques", "OIE353 - Operations Management", "OIE354 - Quality Engineering", 
+    "OIM351 - Industrial Management", "OIM352 - Management Science", "OIM353 - Production Planning and Control", 
+    "OMA351 - Graph Theory", "OMA352 - Operations Research", "OMA353 - Algebra and Number Theory", 
+    "OMA354 - Linear Algebra", "OMA355 - Advanced Numerical Methods", "OMA356 - Random Processes", 
+    "OMA357 - Queuing and Reliability Modelling", "OME352 - Additive Manufacturing", "OME354 - Applied Design Thinking", 
+    "OME355 - Industrial Design & Rapid Prototyping Techniques", "OMF354 - Cost Management of Engineering Projects", 
+    "OMG351 - Fintech Regulation", "OMG352 - NGOs and Sustainable Development", "OMG353 - Democracy and Good Governance", 
+    "OMG354 - Production and Operations Management for Entrepreneurs", "OMG355 - Multivariate Data Analysis", "OML351 - Introduction to Non-destructive Testing", 
+    "OML352 - Electrical, Electronic and Magnetic Materials", "OML353 - Nanomaterials and Applications", "OMR351 - Mechatronics", 
+    "OMR352 - Hydraulics and Pneumatics", "OMR353 - Sensors", "OMV351 - Marine Merchant Vessels", 
+    "OMV352 - Elements of Marine Engineering", "OPE351 - Introduction to Petroleum Refining and Petrochemicals", 
+    "OPR351 - Sustainable Manufacturing", "OPT351 - Basics of Plastics Processing", "OPY351 - Pharmaceutical Nanotechnology", 
+    "OPY352 - IPR for Pharma Industry", "OPY353 - Nutraceuticals", "ORA351 - Foundation of Robotics", 
+    "ORA352 - Concepts in Mobile Robots", "OSF351 - Fire Safety Engineering", "OSF352 - Industrial Hygiene", 
+    "OSF353 - Chemical Process Safety", "OTT351 - Basics of Textile Finishing", "OTT352 - Industrial Engineering for Garment Industry", 
+    "OTT353 - Basics of Textile Manufacture", "OTT354 - Basics of Dyeing and Printing"
+];
+
+const OE_SUBJECTS_AIDS = [
+    "AI3021 - IT in Agricultural System", "AU3002 - Batteries and Management System", "AU3008 - Sensors and Actuators", 
+    "AU3791 - Electric and Hybrid Vehicles", "CBM333 - Assistive Technology", "CBM348 - Foundation Skills in Integrated Product Development", 
+    "CBM356 - Medical Informatics", "CBM370 - Wearable Devices", "CME343 - New Product Development", 
+    "CME365 - Renewable Energy Technologies", "CPE334 - Energy Conservation and Management", "CRA332 - Drone Technologies", 
+    "FT3201 - Fibre Science", "MF3003 - Reverse Engineering", "MF3010 - Micro and Precision Engineering", 
+    "MV3501 - Marine Propulsion", "OAE351 - Aviation Management", "OAE352 - Fundamentals of Aeronautical Engineering", 
+    "OAI351 - Urban Agriculture", "OAI352 - Agriculture Entrepreneurship Development", "OAS351 - Space Science", 
+    "OAS352 - Space Engineering", "OAS353 - Space Vehicles", "OBT351 - Food, Nutrition and Health", 
+    "OBT352 - Basics of Microbial Technology", "OBT353 - Basics of Biomolecules", "OBT354 - Fundamentals of Cell and Molecular Biology", 
+    "OBT355 - Biotechnology for Waste Management", "OCE351 - Environment and Social Impact Assessment", "OCE353 - Lean Concepts, Tools and Practices", 
+    "OCE354 - Basics of Integrated Water Resources Management", "OCH351 - Nano Technology", "OCH352 - Functional Materials", 
+    "OCH353 - Energy Technology", "OCH354 - Surface Science", "OEC351 - Signals and Systems", 
+    "OEC352 - Fundamentals of Electronic Devices and Circuits", "OEC353 - VLSI Design", "OEE351 - Renewable Energy System", 
+    "OEE352 - Electric Vehicle Technology", "OEE353 - Introduction to Control Systems", "OEI351 - Introduction to Industrial Instrumentation and Control", 
+    "OEI352 - Introduction to Control Engineering", "OEI353 - Introduction to PLC Programming", "OEI354 - Introduction to Industrial Automation Systems", 
+    "OEN351 - Drinking Water Supply and Treatment", "OEN352 - Biodiversity Conservation", "OFD351 - Holistic Nutrition", 
+    "OFD352 - Traditional Indian Foods", "OFD353 - Introduction to Food Processing", "OFD354 - Fundamentals of Food Engineering", 
+    "OFD355 - Food Safety and Quality Regulations", "OGI351 - Remote Sensing Concepts", "OGI352 - Geographical Information System", 
+    "OHS351 - English for Competitive Examinations", "OHS352 - Project Report Writing", "OIE351 - Introduction to Industrial Engineering", 
+    "OIE352 - Resource Management Techniques", "OIE353 - Operations Management", "OIE354 - Quality Engineering", 
+    "OIM351 - Industrial Management", "OIM352 - Management Science", "OIM353 - Production Planning and Control", 
+    "OMA351 - Graph Theory", "OMA352 - Operations Research", "OMA353 - Algebra and Number Theory", 
+    "OMA354 - Linear Algebra", "OMA355 - Advanced Numerical Methods", "OMA356 - Random Processes", 
+    "OMA357 - Queuing and Reliability Modelling", "OME352 - Additive Manufacturing", "OME354 - Applied Design Thinking", 
+    "OME355 - Industrial Design & Rapid Prototyping Techniques", "OMF354 - Cost Management of Engineering Projects", 
+    "OMG351 - Fintech Regulation", "OMG352 - NGOs and Sustainable Development", "OMG353 - Democracy and Good Governance", 
+    "OMG354 - Production and Operations Management for Entrepreneurs", "OMG355 - Multivariate Data Analysis", "OML351 - Introduction to Non-destructive Testing", 
+    "OML352 - Electrical, Electronic and Magnetic Materials", "OML353 - Nanomaterials and Applications", "OMR351 - Mechatronics", 
+    "OMR352 - Hydraulics and Pneumatics", "OMR353 - Sensors", "OMV351 - Marine Merchant Vessels", 
+    "OMV352 - Elements of Marine Engineering", "OPE351 - Introduction to Petroleum Refining and Petrochemicals", 
+    "OPE353 - Industrial Safety", "OPE354 - Unit Operations in Petro Chemical Industries", "OPR351 - Sustainable Manufacturing", 
+    "OPT351 - Basics of Plastics Processing", "OPT352 - Plastic Materials for Engineers", "OPT353 - Properties and Testing of Plastics", 
+    "OPY351 - Pharmaceutical Nanotechnology", "OPY352 - IPR for Pharma Industry", "OPY353 - Nutraceuticals", 
+    "ORA351 - Foundation of Robotics", "ORA352 - Concepts in Mobile Robots", "OSF351 - Fire Safety Engineering", 
+    "OSF352 - Industrial Hygiene", "OSF353 - Chemical Process Safety", "OTT351 - Basics of Textile Finishing", 
+    "OTT352 - Industrial Engineering for Garment Industry", "OTT353 - Basics of Textile Manufacture", "OTT354 - Basics of Dyeing and Printing", 
+    "OTT355 - Garment Manufacturing Technology"
+];
+
+const OE_SUBJECTS_ECE = [
+    "AI3021 - IT in Agricultural System", "AU3002 - Batteries and Management System", "AU3008 - Sensors and Actuators", 
+    "AU3791 - Electric and Hybrid Vehicles", "CBM333 - Assistive Technology", "CBM348 - Foundation Skills in Integrated Product Development", 
+    "CBM356 - Medical Informatics", "CBM370 - Wearable Devices", "CCS342 - DevOps", "CCS355 - Neural Networks and Deep Learning", 
+    "CCS361 - Robotic Process Automation", "CCW332 - Digital Marketing", "CME343 - New Product Development", 
+    "CME365 - Renewable Energy Technologies", "CPE334 - Energy Conservation and Management", "CRA332 - Drone Technologies", 
+    "FT3201 - Fibre Science", "MF3003 - Reverse Engineering", "MF3010 - Micro and Precision Engineering", 
+    "MV3501 - Marine Propulsion", "OAE351 - Aviation Management", "OAE352 - Fundamentals of Aeronautical Engineering", 
+    "OAI351 - Urban Agriculture", "OAI352 - Agriculture Entrepreneurship Development", "OAS351 - Space Science", 
+    "OAS352 - Space Engineering", "OAS353 - Space Vehicles", "OBT351 - Food, Nutrition and Health", 
+    "OBT352 - Basics of Microbial Technology", "OBT353 - Basics of Biomolecules", "OBT354 - Fundamentals of Cell and Molecular Biology", 
+    "OBT355 - Biotechnology for Waste Management", "OBT356 - Lifestyle Diseases", "OBT357 - Biotechnology in Health Care", 
+    "OCE351 - Environmental and Social Impact Assessment", "OCE353 - Lean Concepts, Tools and Practices", "OCE354 - Basics of Integrated Water Resources Management", 
+    "OCH351 - Nano Technology", "OCH352 - Functional Materials", "OCH353 - Energy Technology", "OCH354 - Surface Science", 
+    "OEE351 - Renewable Energy System", "OEE352 - Electric Vehicle Technology", "OEE353 - Introduction to Control Systems", 
+    "OEI351 - Introduction to Industrial Instrumentation and Control", "OEI352 - Introduction to Control Engineering", "OEI353 - Introduction to PLC Programming", 
+    "OEI354 - Introduction to Industrial Automation Systems", "OEN351 - Drinking Water Supply and Treatment", "OEN352 - Biodiversity Conservation", 
+    "OFD351 - Holistic Nutrition", "OFD352 - Traditional Indian Foods", "OFD353 - Introduction to Food Processing", 
+    "OFD354 - Fundamentals of Food Engineering", "OFD355 - Food Safety and Quality Regulations", "OGI351 - Remote Sensing Concepts", 
+    "OGI352 - Geographical Information System", "OHS351 - English for Competitive Examinations", "OHS352 - Project Report Writing", 
+    "OIE351 - Introduction to Industrial Engineering", "OIE352 - Resource Management Techniques", "OIE353 - Operations Management", 
+    "OIE354 - Quality Engineering", "OIM351 - Industrial Management", "OIM352 - Management Science", "OIM353 - Production Planning and Control", 
+    "OMA351 - Graph Theory", "OMA352 - Operations Research", "OMA353 - Algebra and Number Theory", "OMA354 - Linear Algebra", 
+    "OMA355 - Advanced Numerical Methods", "OMA356 - Random Processes", "OMA357 - Queuing and Reliability Modelling", 
+    "OME352 - Additive Manufacturing", "OME354 - Applied Design Thinking", "OME355 - Industrial Design & Rapid Prototyping Techniques", 
+    "OMF354 - Cost Management of Engineering Projects", "OMG351 - Fintech Regulation", "OMG352 - NGOs and Sustainable Development", 
+    "OMG353 - Democracy and Good Governance", "OMG354 - Production and Operations Management for Entrepreneurs", "OMG355 - Multivariate Data Analysis", 
+    "OML351 - Introduction to Non-Destructive Testing", "OML352 - Electrical, Electronic and Magnetic Materials", "OML353 - Nanomaterials and Applications", 
+    "OMR351 - Mechatronics", "OMR352 - Hydraulics and Pneumatics", "OMR353 - Sensors", "OMV351 - Marine Merchant Vehicles", 
+    "OMV352 - Elements of Marine Engineering", "OPE351 - Introduction to Petroleum Refining and Petrochemicals", "OPE353 - Industrial Safety", 
+    "OPE354 - Unit Operations in Petro Chemical Industries", "OPR351 - Sustainable Manufacturing", "OPT351 - Basics of Plastics Processing", 
+    "OPT352 - Plastic Materials for Engineers", "OPT353 - Properties and Testing of Plastics", "OPY351 - Pharmaceutical Nanotechnology", 
+    "OPY352 - IPR for Pharma Industry", "OPY353 - Nutraceuticals", "ORA351 - Foundation of Robotics", "ORA352 - Concepts in Mobile Robots", 
+    "OSF351 - Fire Safety Engineering", "OSF352 - Industrial Hygiene", "OSF353 - Chemical Process Safety", "OTT351 - Basics of Textile Finishing", 
+    "OTT352 - Industrial Engineering for Garment Industry", "OTT353 - Basics of Textile Manufacture", "OTT354 - Basics of Dyeing and Printing", 
+    "OTT355 - Garment Manufacturing Technology"
+];
+
+const OE_SUBJECTS_EEE = [
+    "AU3002 - Batteries and Management System", "AU3008 - Sensors and Actuators", "AU3791 - Electric and Hybrid Vehicles", 
+    "CBM333 - Assistive Technology", "CBM348 - Foundation Skills in Integrated Product Development", "CBM356 - Medical Informatics", 
+    "CBM370 - Wearable Devices", "CCS333 - Augmented Reality/Virtual Reality", "CME343 - New Product Development", 
+    "CME365 - Renewable Energy Technologies", "CPE334 - Energy Conservation and Management", "CRA332 - Drone Technologies", 
+    "FT3201 - Fibre Science", "MF3003 - Reverse Engineering", "MF3010 - Micro and Precision Engineering", 
+    "MV3501 - Marine Propulsion", "OAE352 - Fundamentals of Aeronautical Engineering", "OAI351 - Urban Agriculture", 
+    "OAI352 - Agriculture Entrepreneurship Development", "OAS352 - Space Engineering", "OAS353 - Space Vehicles", 
+    "OBT352 - Basics of Microbial Technology", "OBT353 - Basics of Biomolecules", "OBT354 - Fundamentals of Cell and Molecular Biology", 
+    "OBT355 - Biotechnology for Waste Management", "OBT356 - Lifestyle Diseases", "OBT357 - Biotechnology in Health Care", 
+    "OCE353 - Lean Concepts, Tools And Practices", "OCE354 - Basics of Integrated Water Resources Management", "OCH351 - Nano Technology", 
+    "OCH352 - Functional Materials", "OCH353 - Energy Technology", "OCH354 - Surface Science", 
+    "OCS351 - Artificial Intelligence and Machine Learning Fundamentals", "OCS352 - IoT Concepts and Applications", "OCS353 - Data Science Fundamentals", 
+    "OEC351 - Signals and Systems", "OEC352 - Fundamentals of Electronic Devices and Circuits", "OEC353 - VLSI Design", 
+    "OEI353 - Introduction to PLC Programming", "OEI354 - Introduction to Industrial Automation Systems", "OEN351 - Drinking Water Supply and Treatment", 
+    "OEN352 - Biodiversity Conservation", "OFD352 - Traditional Indian Foods", "OFD353 - Introduction to Food Processing", 
+    "OFD354 - Fundamentals of Food Engineering", "OFD355 - Food Safety and Quality Regulations", "OGI351 - Remote Sensing Concepts", 
+    "OGI352 - Geographical Information System", "OHS351 - English for Competitive Examinations", "OHS352 - Project Report Writing", 
+    "OIE353 - Operations Management", "OIE354 - Quality Engineering", "OIM351 - Industrial Management", 
+    "OIM352 - Management Science", "OIM353 - Production Planning and Control", "OMA352 - Operations Research", 
+    "OMA353 - Algebra and Number Theory", "OMA354 - Linear Algebra", "OMA355 - Advanced Numerical Methods", 
+    "OMA356 - Random Processes", "OMA357 - Queuing and Reliability Modelling", "OME352 - Additive Manufacturing", 
+    "OME354 - Applied Design Thinking", "OME355 - Industrial Design & Rapid Prototyping Techniques", "OMF354 - Cost Management of Engineering Projects", 
+    "OMG352 - NGOs and Sustainable Development", "OMG353 - Democracy and Good Governance", "OMG354 - Production and Operations Management for Entrepreneurs", 
+    "OMG355 - Multivariate Data Analysis", "OML351 - Introduction to Non-Destructive Testing", "OML352 - Electrical, Electronic and Magnetic Materials", 
+    "OML353 - Nanomaterials and Applications", "OMR351 - Mechatronics", "OMR352 - Hydraulics and Pneumatics", 
+    "OMR353 - Sensors", "OMV351 - Marine Merchant Vessels", "OMV352 - Elements of Marine Engineering", 
+    "OPE351 - Introduction to Petroleum Refining and Petrochemicals", "OPE353 - Industrial Safety", "OPE354 - Unit Operations in Petro Chemical Industries", 
+    "OPR351 - Sustainable Manufacturing", "OPT351 - Basics of Plastics Processing", "OPT352 - Plastic Materials for Engineers", 
+    "OPT353 - Properties and Testing of Plastics", "OPY352 - IPR for Pharma Industry", "OPY353 - Nutraceuticals", 
+    "ORA351 - Foundation of Robotics", "ORA352 - Concepts in Mobile Robots", "OSF351 - Fire Safety Engineering", 
+    "OSF352 - Industrial Hygiene", "OSF353 - Chemical Process Safety", "OTT351 - Basics of Textile Finishing", 
+    "OTT352 - Industrial Engineering for Garment Industry", "OTT353 - Basics of Textile Manufacture", "OTT354 - Basics of Dyeing and Printing", 
+    "OTT355 - Garment Manufacturing Technology"
+];
+
+const OE_SUBJECTS_MECH = [
+    "AU3002 - Batteries and Management System", "AU3008 - Sensors and Actuators", "AU3791 - Electric and Hybrid Vehicles", 
+    "CBM333 - Assistive Technology", "CBM348 - Foundation Skills in Integrated Product Development", "CBM356 - Medical Informatics", 
+    "CBM370 - Wearable Devices", "CCS333 - Augmented Reality/Virtual Reality", "CRA332 - Drone Technologies", 
+    "FT3201 - Fibre Science", "MF3003 - Reverse Engineering", "MF3010 - Micro and Precision Engineering", 
+    "MV3501 - Marine Propulsion", "OAE352 - Fundamentals of Aeronautical Engineering", "OAI351 - Urban Agriculture", 
+    "OAI352 - Agriculture Entrepreneurship Development", "OAS352 - Space Engineering", "OAS353 - Space Vehicles", 
+    "OBT352 - Basics of Microbial Technology", "OBT353 - Basics of Biomolecules", "OBT354 - Fundamentals of Cell and Molecular Biology", 
+    "OBT355 - Biotechnology for Waste Management", "OBT356 - Lifestyle Diseases", "OBT357 - Biotechnology in Health Care", 
+    "OCE353 - Lean Concepts, Tools And Practices", "OCE354 - Basics of Integrated Water Resources Management", "OCH351 - Nano Technology", 
+    "OCH352 - Functional Materials", "OCH353 - Energy Technology", "OCH354 - Surface Science", 
+    "OCS351 - Artificial Intelligence and Machine Learning Fundamentals", "OCS352 - IoT Concepts and Applications", "OCS353 - Data Science Fundamentals", 
+    "OEC351 - Signals and Systems", "OEC352 - Fundamentals of Electronic Devices and Circuits", "OEC353 - VLSI Design", 
+    "OEE352 - Electric Vehicle Technology", "OEE353 - Introduction to Control Systems", "OEI353 - Introduction to PLC Programming", 
+    "OEI354 - Introduction to Industrial Automation Systems", "OEN351 - Drinking Water Supply and Treatment", "OEN352 - Biodiversity Conservation", 
+    "OFD352 - Traditional Indian Foods", "OFD353 - Introduction to Food Processing", "OFD354 - Fundamentals of Food Engineering", 
+    "OFD355 - Food Safety and Quality Regulations", "OGI351 - Remote Sensing Concepts", "OGI352 - Geographical Information System", 
+    "OHS351 - English for Competitive Examinations", "OHS352 - Project Report Writing", "OIE353 - Operations Management", 
+    "OIE354 - Quality Engineering", "OIM351 - Industrial Management", "OIM352 - Management Science", 
+    "OIM353 - Production Planning and Control", "OMA352 - Operations Research", "OMA353 - Algebra and Number Theory", 
+    "OMA354 - Linear Algebra", "OMA355 - Advanced Numerical Methods", "OMA356 - Random Processes", 
+    "OMA357 - Queueing and Reliability Modelling", "OME354 - Applied Design Thinking", "OME355 - Industrial Design & Rapid Prototyping Techniques", 
+    "OMF354 - Cost Management of Engineering Projects", "OMG352 - NGOs and Sustainable Development", "OMG353 - Democracy and Good Governance", 
+    "OMG354 - Production and Operations Management for Entrepreneurs", "OMG355 - Multivariate Data Analysis", "OML351 - Introduction to Non-destructive Testing", 
+    "OML352 - Electrical, Electronic and Magnetic Materials", "OML353 - Nanomaterials and Applications", "OMR351 - Mechatronics", 
+    "OMR353 - Sensors", "OMV351 - Marine Merchant Vessels", "OMV352 - Elements of Marine Engineering", 
+    "OPE334 - Energy Conservation and Management", "OPE351 - Introduction to Petroleum Refining and Petrochemicals", "OPE353 - Industrial Safety", 
+    "OPE354 - Unit Operations in Petro Chemical Industries", "OPR351 - Sustainable Manufacturing", "OPT351 - Basics of Plastics Processing", 
+    "OPT352 - Plastic Materials for Engineers", "OPT353 - Properties and Testing of Plastics", "OPY352 - IPR for Pharma Industry", 
+    "OPY353 - Nutraceuticals", "ORA351 - Foundation of Robotics", "ORA352 - Concepts in Mobile Robots", 
+    "OSF351 - Fire Safety Engineering", "OSF352 - Industrial Hygiene", "OSF353 - Chemical Process Safety", 
+    "OTT351 - Basics of Textile Finishing", "OTT352 - Industrial Engineering for Garment Industry", "OTT353 - Basics of Textile Manufacture", 
+    "OTT354 - Basics of Dyeing and Printing", "OTT355 - Garment Manufacturing Technology"
+];
+
+const OE_SUBJECTS_CIVIL = [
+    "AU3002 - Batteries and Management System", "AU3008 - Sensors and Actuators", "AU3791 - Electric and Hybrid Vehicles", 
+    "CBM333 - Assistive Technology", "CBM348 - Foundation Skills in Integrated Product Development", "CBM356 - Medical Informatics", 
+    "CBM370 - Wearable Devices", "CCS333 - Augmented Reality/Virtual Reality", "CME343 - New Product Development", 
+    "CME365 - Renewable Energy Technologies", "CPE334 - Energy Conservation and Management", "CRA332 - Drone Technologies", 
+    "FT3201 - Fibre Science", "MF3003 - Reverse Engineering", "MF3010 - Micro and Precision Engineering", 
+    "MV3501 - Marine Propulsion", "OAE352 - Fundamentals of Aeronautical Engineering", "OAI351 - Urban Agriculture", 
+    "OAI352 - Agriculture Entrepreneurship Development", "OAS352 - Space Engineering", "OAS353 - Space Vehicles", 
+    "OBT352 - Basics of Microbial Technology", "OBT353 - Basics of Biomolecules", "OBT354 - Fundamentals of Cell and Molecular Biology", 
+    "OBT355 - Biotechnology for Waste Management", "OBT356 - Lifestyle Diseases", "OBT357 - Biotechnology in Health Care", 
+    "OCH351 - Nano Technology", "OCH352 - Functional Materials", "OCH353 - Energy Technology", 
+    "OCH354 - Surface Science", "OCS351 - Artificial Intelligence and Machine Learning Fundamentals", "OCS352 - IoT Concepts and Applications", 
+    "OCS353 - Data Science Fundamentals", "OEC351 - Signals and Systems", "OEC352 - Fundamentals of Electronic Devices and Circuits", 
+    "OEC353 - VLSI Design", "OEE352 - Electric Vehicle Technology", "OEE353 - Introduction to Control Systems", 
+    "OEI353 - Introduction to PLC Programming", "OEI354 - Introduction to Industrial Automation Systems", "OEN351 - Drinking Water Supply and Treatment", 
+    "OEN352 - Biodiversity Conservation", "OFD352 - Traditional Indian Foods", "OFD353 - Introduction to Food Processing", 
+    "OFD354 - Fundamentals of Food Engineering", "OFD355 - Food Safety and Quality Regulations", "OGI351 - Remote Sensing Concepts", 
+    "OGI352 - Geographical Information System", "OHS351 - English for Competitive Examinations", "OHS352 - Project Report Writing", 
+    "OIE353 - Operations Management", "OIE354 - Quality Engineering", "OIM351 - Industrial Management", 
+    "OIM352 - Management Science", "OIM353 - Production Planning and Control", "OMA352 - Operations Research", 
+    "OMA353 - Algebra and Number Theory", "OMA354 - Linear Algebra", "OMA355 - Advanced Numerical Methods", 
+    "OMA356 - Random Processes", "OMA357 - Queuing and Reliability Modelling", "OME352 - Additive Manufacturing", 
+    "OME354 - Applied Design Thinking", "OME355 - Industrial Design & Rapid Prototyping Techniques", "OMF354 - Cost Management of Engineering Projects", 
+    "OMG352 - NGOs and Sustainable Development", "OMG353 - Democracy and Good Governance", "OMG354 - Production and Operations Management for Entrepreneurs", 
+    "OMG355 - Multivariate Data Analysis", "OML351 - Introduction to Non-Destructive Testing", "OML352 - Electrical, Electronic and Magnetic Materials", 
+    "OML353 - Nanomaterials and Applications", "OMR351 - Mechatronics", "OMR352 - Hydraulics and Pneumatics", 
+    "OMR353 - Sensors", "OMV351 - Marine Merchant Vessels", "OMV352 - Elements of Marine Engineering", 
+    "OPE351 - Introduction to Petroleum Refining and Petrochemicals", "OPE353 - Industrial Safety", "OPE354 - Unit Operations in Petro Chemical Industries", 
+    "OPR351 - Sustainable Manufacturing", "OPT351 - Basics of Plastics Processing", "OPT352 - Plastic Materials for Engineers", 
+    "OPT353 - Properties and Testing of Plastics", "OPY352 - IPR for Pharma Industry", "OPY353 - Nutraceuticals", 
+    "ORA351 - Foundation of Robotics", "ORA352 - Concepts in Mobile Robots", "OSF351 - Fire Safety Engineering", 
+    "OSF352 - Industrial Hygiene", "OSF353 - Chemical Process Safety", "OTT351 - Basics of Textile Finishing", 
+    "OTT352 - Industrial Engineering for Garment Industry", "OTT353 - Basics of Textile Manufacture", "OTT354 - Basics of Dyeing and Printing", 
+    "OTT355 - Garment Manufacturing Technology"
+];
+
 let activePEIndex = null;
 let activePESelection = null;
 let selectedPEs = {}; // Tracks selected PE subjects by index string `${semester}-${index}`
 
+let activeOEIndex = null;
+let activeOESelection = null;
+let selectedOEs = {}; // Tracks selected OE subjects by index string `${semester}-${index}`
+
 const pageTitles = {
-    'landing-page': 'Home',
-    'regulation-page': 'Curriculum',
-    'branch-page': 'Major',
-    'semester-page': 'Semester',
-    'gpa-calc-page': 'GPA Calc',
-    'cgpa-page': 'CGPA Calc'
+    'landing-page': '<i class="fa-solid fa-house"></i>',
+    'regulation-page': '<i class="fa-solid fa-book-open"></i>',
+    'branch-page': '<i class="fa-solid fa-code-branch"></i>',
+    'semester-page': '<i class="fa-solid fa-layer-group"></i>',
+    'gpa-calc-page': '<i class="fa-solid fa-calculator"></i>',
+    'cgpa-page': '<i class="fa-solid fa-chart-line"></i>'
 };
 
 function navigateTo(pageId, direction = 'forward') {
@@ -1364,7 +1585,7 @@ function navigateBack() {
 function updateTopHeaderAndMenu(pageId) {
     const activePageTitleEl = document.getElementById('active-page-title');
     if (activePageTitleEl) {
-        activePageTitleEl.innerText = pageTitles[pageId] || 'Gradify';
+        activePageTitleEl.innerHTML = pageTitles[pageId] || '<i class="fa-solid fa-graduation-cap"></i>';
     }
 
     const menuToggleBtn = document.querySelector('.menu-toggle-btn');
@@ -1591,6 +1812,21 @@ function selectSemester(semesterNum) {
         const isProgrammeElective = sub.name.includes("Programme Elective") && 
             (state.selectedRegulation === '2025' && ['aids', 'cse', 'eee', 'mech', 'civil'].includes(state.selectedBranch));
 
+        const isOpenElective = sub.name.includes("Open Elective") && state.selectedRegulation === '2021' && ['cse', 'ece', 'eee', 'mech', 'civil', 'aids'].includes(state.selectedBranch);
+        let isOE = false;
+        let oeButtonHtml = '';
+
+        if (isOpenElective) {
+            isOE = true;
+            if (selectedOEs[`${state.selectedSemester}-${index}`]) {
+                displayName = selectedOEs[`${state.selectedSemester}-${index}`];
+            }
+            oeButtonHtml = `<button class="btn-pe-select" onclick="openOEModal(${index})">
+                <span class="pe-subject-name" id="oe-name-${index}">${displayName}</span>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>`;
+        }
+
         if (isProfessionalElective || isProgrammeElective) {
             isPE = true;
             if (selectedPEs[`${state.selectedSemester}-${index}`]) {
@@ -1607,7 +1843,7 @@ function selectSemester(semesterNum) {
         card.innerHTML = `
             <div class="subject-header">
                 ${hideCode ? '' : `<span class="subject-code">${sub.code}</span>`}
-                ${isPE ? peButtonHtml : `<span class="subject-name">${sub.name}${sub.optional ? ' <span style="font-size: 0.8em; opacity: 0.7;">(Optional)</span>' : ''}</span>`}
+                ${isPE ? peButtonHtml : (isOE ? oeButtonHtml : `<span class="subject-name">${sub.name}${sub.optional ? ' <span style="font-size: 0.8em; opacity: 0.7;">(Optional)</span>' : ''}</span>`)}
             </div>
             <div class="grade-select-wrapper">
                 <select class="grade-select" id="grade-select-${index}" data-credits="${sub.credits}" data-optional="${sub.optional ? 'true' : 'false'}">
@@ -1686,6 +1922,7 @@ function calculateCGPA() {
     let totalGpaSum = 0;
     let counts = 0;
     let hasInvalid = false;
+    let semGpas = []; // Collect data for chart
 
     for (let sem = 1; sem <= 8; sem++) {
         const inputEl = document.getElementById(`sem${sem}-gpa`);
@@ -1702,6 +1939,7 @@ function calculateCGPA() {
                 groupEl.classList.remove('invalid');
                 totalGpaSum += num;
                 counts++;
+                semGpas.push({ sem: sem, gpa: num });
             }
         } else {
             groupEl.classList.remove('invalid');
@@ -1719,7 +1957,7 @@ function calculateCGPA() {
     }
 
     const cgpa = totalGpaSum / counts;
-    displayResult(cgpa.toFixed(2), "Your CGPA Rating", getCGPAFeedBack(cgpa));
+    displayResult(cgpa.toFixed(2), "Your CGPA Rating", getCGPAFeedBack(cgpa), semGpas);
 
     // Save to localStorage
     localStorage.setItem('saved_cgpa', cgpa.toFixed(2));
@@ -1821,6 +2059,72 @@ function confirmPESelection() {
     closePEModal();
 }
 
+// ==========================================================================
+// 6. OPEN ELECTIVE SELECTION LOGIC
+// ==========================================================================
+
+function openOEModal(index) {
+    activeOEIndex = index;
+    activeOESelection = null;
+    document.getElementById('oe-search-input').value = '';
+    document.getElementById('btn-confirm-oe').disabled = true;
+    
+    document.getElementById('oe-modal').classList.add('active');
+    filterOEList();
+}
+
+function closeOEModal() {
+    document.getElementById('oe-modal').classList.remove('active');
+}
+
+function filterOEList() {
+    const searchText = document.getElementById('oe-search-input').value.toLowerCase();
+    const container = document.getElementById('oe-list-container');
+    container.innerHTML = '';
+    
+    let subjectList = OE_SUBJECTS_CSE;
+    if (state.selectedBranch === 'aids') subjectList = OE_SUBJECTS_AIDS;
+    else if (state.selectedBranch === 'ece') subjectList = OE_SUBJECTS_ECE;
+    else if (state.selectedBranch === 'eee') subjectList = OE_SUBJECTS_EEE;
+    else if (state.selectedBranch === 'mech') subjectList = OE_SUBJECTS_MECH;
+    else if (state.selectedBranch === 'civil') subjectList = OE_SUBJECTS_CIVIL;
+    
+    const filtered = subjectList.filter(name => name.toLowerCase().includes(searchText));
+    
+    if (filtered.length === 0) {
+        container.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 1rem;">No Open Elective found.</div>`;
+        return;
+    }
+
+    filtered.forEach(name => {
+        const isSelected = activeOESelection === name;
+        const card = document.createElement('div');
+        card.className = `pe-card ${isSelected ? 'selected' : ''}`; // using same CSS class
+        card.onclick = () => selectOE(name);
+        card.innerHTML = `
+            <i class="fa-regular ${isSelected ? 'fa-circle-check' : 'fa-circle'} pe-card-icon"></i>
+            <span class="pe-card-name">${name}</span>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function selectOE(subjectName) {
+    activeOESelection = subjectName;
+    document.getElementById('btn-confirm-oe').disabled = false;
+    filterOEList(); // Re-render to show selection
+}
+
+function confirmOESelection() {
+    if (!activeOESelection) return;
+    
+    const semesterKey = `${state.selectedSemester}-${activeOEIndex}`;
+    selectedOEs[semesterKey] = activeOESelection;
+    
+    document.getElementById(`oe-name-${activeOEIndex}`).innerText = activeOESelection;
+    closeOEModal();
+}
+
 // Result Feedbacks
 function getGPAFeedBack(gpa) {
     if (gpa >= 9.0) return "Spectacular! You are performing at a top-tier academic level.";
@@ -1838,12 +2142,108 @@ function getCGPAFeedBack(cgpa) {
     return "Continuous effort builds high scores. Keep pushing forward.";
 }
 
+let cgpaChartInstance = null;
+
 // Universal Alerts and Results modal wrappers
-function displayResult(value, title, message) {
+function displayResult(value, title, message, chartData = null) {
     const modal = document.getElementById('result-modal');
     document.getElementById('modal-result-value').innerText = value;
     document.getElementById('modal-result-title').innerText = title;
     document.getElementById('modal-result-msg').innerText = message;
+
+    const chartContainer = document.getElementById('cgpa-chart-container');
+    const canvas = document.getElementById('cgpaChart');
+    if (chartContainer && canvas) {
+        if (chartData && chartData.length > 0) {
+            chartContainer.classList.add('active');
+            
+            if (cgpaChartInstance) {
+                cgpaChartInstance.destroy();
+            }
+
+            const labels = chartData.map(item => `S${item.sem}`);
+            const dataPoints = chartData.map(item => item.gpa);
+
+            const ctx = canvas.getContext('2d');
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, 180);
+            gradient.addColorStop(0, 'rgba(157, 78, 221, 0.6)');
+            gradient.addColorStop(1, 'rgba(0, 245, 212, 0.0)');
+
+            cgpaChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'GPA',
+                        data: dataPoints,
+                        borderColor: '#00f5d4',
+                        backgroundColor: gradient,
+                        borderWidth: 3,
+                        pointBackgroundColor: '#ffea00',
+                        pointBorderColor: '#1f1135',
+                        pointBorderWidth: 2,
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#ffea00',
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(31, 17, 53, 0.95)',
+                            titleColor: '#e0aaff',
+                            bodyColor: '#fff',
+                            borderColor: 'rgba(157, 78, 221, 0.4)',
+                            borderWidth: 1,
+                            padding: 10,
+                            displayColors: false,
+                            titleFont: { family: "'Outfit', sans-serif", size: 13 },
+                            bodyFont: { family: "'Outfit', sans-serif", size: 14, weight: 'bold' },
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.parsed.y.toFixed(2);
+                                    if (context.dataIndex > 0) {
+                                        const prev = context.dataset.data[context.dataIndex - 1];
+                                        if (context.parsed.y > prev) label += '  ➚';
+                                        else if (context.parsed.y < prev) label += '  ➘';
+                                        else label += '  —';
+                                    } else {
+                                        label += '  ★';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false, drawBorder: false },
+                            ticks: { color: '#b5a9c6', font: { family: "'Outfit', sans-serif" } }
+                        },
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
+                            ticks: { color: '#b5a9c6', font: { family: "'Outfit', sans-serif" }, stepSize: 1, min: 0, max: 10 }
+                        }
+                    },
+                    animation: {
+                        y: {
+                            duration: 1500,
+                            easing: 'easeOutElastic'
+                        }
+                    }
+                }
+            });
+        } else {
+            chartContainer.classList.remove('active');
+        }
+    }
 
     // Animate score counter increments
     animateValue(document.getElementById('modal-result-value'), 0, parseFloat(value), 600);
