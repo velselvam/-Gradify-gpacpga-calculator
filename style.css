@@ -18,7 +18,7 @@
     --glass-border-hover: #9d4edd;
     --glass-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
-    --body-bg: #090514;
+    --body-bg: #e2e8f0;
     --header-bg: #140a26;
     --card-bg: #1f1135;
     --card-bg-hover: #2b1647;
@@ -256,42 +256,26 @@ body {
 }
 
 .active-page-title {
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #fff;
-    background: linear-gradient(90deg, rgba(157,78,221,0.2) 0%, rgba(255,0,110,0.2) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(157, 78, 221, 0.5), inset 0 0 10px rgba(255, 0, 110, 0.2);
-    padding: 0.35rem 1rem 0.35rem 1.6rem;
-    border-radius: 20px;
-    max-width: 130px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    position: relative;
-    backdrop-filter: blur(10px);
-}
-
-.active-page-title::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: #00f5d4;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    box-shadow: 0 0 10px #00f5d4, 0 0 20px #00f5d4;
-    animation: blink 1.5s ease-in-out infinite alternate;
+    border: none;
+    background: var(--card-bg);
+    color: #fff; /* white color as requested */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
 }
 
-@keyframes blink {
-    0% { opacity: 1; transform: translateY(-50%) scale(1.1); }
-    100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+.active-page-title:active {
+    transform: scale(0.9);
+    background: var(--card-bg-hover);
+}
+
+.active-page-title i {
+    font-size: 1.1rem;
 }
 
 /* ==========================================================================
@@ -1669,7 +1653,28 @@ button:active {
 }
 
 /* ==========================================================================
-   18. MEDIA RENDERING ADJUSTMENTS
+   18. CGPA CHART STYLES (CUSTOM CSS BAR CHART)
+   ========================================================================== */
+.cgpa-chart-container {
+    display: none; /* hidden by default */
+    width: 100%;
+    height: 180px;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.cgpa-chart-container.active {
+    display: block;
+    animation: fadeInChart 0.5s ease forwards;
+}
+
+@keyframes fadeInChart {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   19. MEDIA RENDERING ADJUSTMENTS
    ========================================================================== */
 @media (max-width: 480px) {
     body {
