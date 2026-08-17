@@ -75,13 +75,13 @@
 
         <!-- 1. LANDING PAGE -->
         <section id="landing-page" class="page active">
-            <div class="welcome-container">
+            <div class="welcome-container scrollable-area">
                 <h1 class="welcome-text">Analyze Your <br><span class="gradient-text">Academic standing</span></h1>
                 <p class="subtitle">Compute, persist, and target your academic GPA & CGPA goals with app-like fluidity.
                 </p>
 
                 <!-- Hero Graphic Additions -->
-                <div class="hero-graphic-container animate-fade-up" style="margin: 2rem auto; position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                <div class="hero-graphic-container animate-fade-up" style="margin: 1rem auto; position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
                     <div class="hero-blob" style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, var(--accent), #ff79c6); border-radius: 50%; opacity: 0.25; filter: blur(22px); animation: pulse-blob 3s ease-in-out infinite alternate;"></div>
                     
                     <!-- Playful Particles -->
@@ -89,8 +89,8 @@
                     <i class="fa-solid fa-certificate spark-2" style="position: absolute; bottom: 20px; right: 10px; color: #e0aaff; font-size: 1.1rem; animation: sparkle 2.5s infinite ease-in-out alternate-reverse; z-index: 1;"></i>
                     <i class="fa-solid fa-wand-magic-sparkles spark-3" style="position: absolute; top: 50px; left: -20px; color: #ff79c6; font-size: 1.3rem; animation: float-up-down 4s infinite ease-in-out; z-index: 1;"></i>
                     
-                    <div class="hero-icon-circle glass-card" style="width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(157, 78, 221, 0.25); animation: float-up-down 4s ease-in-out infinite;">
-                        <i class="fa-solid fa-graduation-cap" style="font-size: 3.2rem; background: linear-gradient(135deg, #7b2cbf, #ff79c6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 3s ease-in-out infinite;"></i>
+                    <div class="hero-icon-circle glass-card" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 8px 32px rgba(157, 78, 221, 0.25); animation: float-up-down 4s ease-in-out infinite;">
+                        <i class="fa-solid fa-graduation-cap" style="font-size: 2.5rem; background: linear-gradient(135deg, #7b2cbf, #ff79c6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: cap-toss 3s ease-in-out infinite;"></i>
                     </div>
                     
                     <div class="floating-badge glass-card" style="position: absolute; top: -8px; right: -28px; padding: 0.4rem 0.8rem; border-radius: 14px; font-size: 0.8rem; font-weight: 800; background: linear-gradient(135deg, rgba(157, 78, 221, 0.4), rgba(255, 121, 198, 0.4)); border: 1px solid rgba(255, 255, 255, 0.6); z-index: 3; animation: float-up-down 3.5s ease-in-out infinite reverse; box-shadow: 0 4px 15px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
@@ -98,7 +98,37 @@
                     </div>
                 </div>
 
-                <div class="action-grid animate-fade-up" style="margin-top: 2.5rem;">
+                <!-- Academic History / Persisted Scores Section -->
+                <div class="dashboard-wrapper animate-fade-up" style="margin: 0.8rem 0 1.2rem;">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card glass-card btn-ripple" onclick="viewGPAHistory()" style="cursor: pointer; position: relative;" title="Click to view saved GPA subject breakdown">
+                            <div class="db-icon">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div class="db-info" style="flex: 1;">
+                                <span class="db-label" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                                    SAVED GPA
+                                    <i class="fa-solid fa-eye" style="font-size: 0.65rem; color: var(--accent);"></i>
+                                </span>
+                                <span class="db-val" id="home-saved-gpa">0.00</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-card glass-card btn-ripple" onclick="viewCGPAHistory()" style="cursor: pointer; position: relative;" title="Click to view saved CGPA semester breakdown">
+                            <div class="db-icon" style="background: rgba(255, 121, 198, 0.15); color: #ff79c6;">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div class="db-info" style="flex: 1;">
+                                <span class="db-label" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                                    SAVED CGPA
+                                    <i class="fa-solid fa-eye" style="font-size: 0.65rem; color: #ff79c6;"></i>
+                                </span>
+                                <span class="db-val" id="home-saved-cgpa">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-grid animate-fade-up">
                     <button class="action-btn gpa-btn btn-ripple" onclick="navigateTo('regulation-page')">
                         <span class="btn-icon"><i class="fa-solid fa-calculator"></i></span>
                         <span class="btn-text">
@@ -119,7 +149,7 @@
                 </div>
 
                 <div class="home-footer-credits animate-fade-up"
-                    style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; font-weight: 500; font-family: var(--font-primary); letter-spacing: 0.5px;">
+                    style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1.2rem; font-weight: 500; font-family: var(--font-primary); letter-spacing: 0.5px;">
                     🖥️ Created by R. Velselvam, B.E. (CSE),
                 </div>
             </div>
@@ -407,8 +437,12 @@
                             </button>
                         </div>
                         <div class="saved-data-display" style="width: 100%; display: flex; justify-content: space-around; font-size: 0.9rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color);">
-                            <div><strong>GPA:</strong> <span id="settings-saved-gpa">0.00</span></div>
-                            <div><strong>CGPA:</strong> <span id="settings-saved-cgpa">0.00</span></div>
+                            <div class="btn-ripple" onclick="viewGPAHistory()" style="cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 10px; background: rgba(157, 78, 221, 0.1); border: 1px solid var(--primary-glow); display: flex; align-items: center; gap: 0.4rem;" title="Click to view GPA breakdown">
+                                <strong>GPA:</strong> <span id="settings-saved-gpa">0.00</span> <i class="fa-solid fa-eye" style="font-size: 0.75rem; color: var(--accent);"></i>
+                            </div>
+                            <div class="btn-ripple" onclick="viewCGPAHistory()" style="cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 10px; background: rgba(255, 121, 198, 0.1); border: 1px solid rgba(255, 121, 198, 0.3); display: flex; align-items: center; gap: 0.4rem;" title="Click to view CGPA breakdown">
+                                <strong>CGPA:</strong> <span id="settings-saved-cgpa">0.00</span> <i class="fa-solid fa-eye" style="font-size: 0.75rem; color: #ff79c6;"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -473,6 +507,38 @@
                 <div class="pe-modal-footer">
                     <button class="btn-cancel btn-ripple" onclick="closeOEModal()">Cancel</button>
                     <button class="btn-confirm btn-primary-gradient btn-ripple" id="btn-confirm-oe" onclick="confirmOESelection()" disabled>Confirm Selection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. SAVED HISTORY BREAKDOWN MODAL -->
+    <div id="history-detail-modal" class="modal">
+        <div class="modal-content glass-card" style="max-width: 380px; padding: 1.5rem 1.25rem;">
+            <button class="modal-close" onclick="closeHistoryModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="settings-modal-header" style="justify-content: center; gap: 0.5rem;">
+                    <i class="fa-solid fa-clock-rotate-left modal-settings-icon animated-icon" style="color: var(--accent);"></i>
+                    <h3 class="result-title" id="history-modal-title">Academic Breakdown</h3>
+                </div>
+                <p class="result-message" id="history-modal-subtitle" style="font-size: 0.8rem; margin-bottom: 0.8rem;">Detailed history record of your calculation.</p>
+                
+                <div class="result-badge-wrapper" style="margin: 0.5rem auto 1rem;">
+                    <div class="result-ring"></div>
+                    <div class="result-number" id="history-modal-score">0.00</div>
+                </div>
+
+                <div id="history-modal-body-container" class="scrollable-area" style="max-height: 320px; width: 100%; margin-top: 0.5rem; text-align: left;">
+                    <!-- Dynamic subject list or semester breakdown list injected here -->
+                </div>
+
+                <div class="history-modal-footer" id="history-modal-footer" style="display: flex; gap: 0.6rem; width: 100%; margin-top: 1.2rem;">
+                    <button class="btn-danger-clear btn-ripple" id="history-clear-btn" onclick="clearDataFromHistoryModal()" style="flex: 1; padding: 0.7rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.4rem; font-family: var(--font-primary);">
+                        <i class="fa-solid fa-trash-can"></i> Clear Data
+                    </button>
+                    <button class="btn-done btn-primary-gradient btn-ripple" style="flex: 1; margin-top: 0; padding: 0.7rem; font-size: 0.85rem;" onclick="closeHistoryModal()">Close</button>
                 </div>
             </div>
         </div>
