@@ -539,37 +539,37 @@ const SUBJECT_SCHEMAS = {
                 { code: "EN25C04", name: "English Communication Skills Laboratory – II", credits: 1 }
             ],
             5: [
-                { code: "AD25501", name: "Optimisation Techniques", credits: 2 },
-                { code: "AD25502", name: "Natural Language Processing", credits: 3 },
-                { code: "PE-I", name: "Programme Elective – I", credits: 3 },
-                { code: "PE-II", name: "Programme Elective – II", credits: 3 },
-                { code: "AD25503", name: "Machine Learning", credits: 4 },
-                { code: "CS25C14", name: "Computer Networks", credits: 4 },
-                { code: "AD25504", name: "Internet of Things", credits: 3 },
-                { code: "SDC-III", name: "Skill Development Course – III", credits: 2 },
-                { code: "IOC-I", name: "Industry Oriented Course – I", credits: 1 }
+                { name: "Optimisation Techniques", credits: 2 },
+                { name: "Natural Language Processing", credits: 3 },
+                { name: "Programme Elective – I", credits: 3 },
+                { name: "Programme Elective – II", credits: 3 },
+                { name: "Machine Learning", credits: 4 },
+                { name: "Computer Networks", credits: 4 },
+                { name: "Internet of Things", credits: 3 },
+                { name: "Skill Development Course – III", credits: 2 },
+                { name: "Industry Oriented Course – I", credits: 1 }
             ],
             6: [
-                { code: "CS25C15", name: "Compiler Design", credits: 3 },
-                { code: "PE-III", name: "Programme Elective – III", credits: 3 },
-                { code: "OE-I", name: "Open Elective", credits: 3 },
-                { code: "AD25601", name: "Deep Learning", credits: 4 },
-                { code: "AD25602", name: "Image Processing", credits: 3 },
-                { code: "AD25603", name: "UI/UX Design and Human Centered Design", credits: 3 },
-                { code: "IOC-II", name: "Industry Oriented Course – II", credits: 1 },
-                { code: "CS25C16", name: "Full Stack Development Laboratory", credits: 2 },
-                { code: "SLC-I", name: "Self-Learning Course", credits: 1 }
+                { name: "Compiler Design", credits: 3 },
+                { name: "Programme Elective – III", credits: 3 },
+                { name: "Open Elective", credits: 3 },
+                { name: "Deep Learning", credits: 4 },
+                { name: "Image Processing", credits: 3 },
+                { name: "UI/UX Design and Human Centered Design", credits: 3 },
+                { name: "Industry Oriented Course – II", credits: 1 },
+                { name: "Full Stack Development Laboratory", credits: 2 },
+                { name: "Self-Learning Course", credits: 1 }
             ],
             7: [
-                { code: "PE-IV", name: "Programme Elective – IV", credits: 3 },
-                { code: "PE-V", name: "Programme Elective – V", credits: 3 },
-                { code: "UC25C01", name: "Climate Change and Sustainability", credits: 2 },
-                { code: "AD25701", name: "Ethical Hacking and Penetration Testing", credits: 3 },
-                { code: "ME25C06", name: "Engineering Entrepreneurship Development", credits: 3 },
-                { code: "INT-VII", name: "Summer Internship", credits: 1 }
+                { name: "Programme Elective – IV", credits: 3 },
+                { name: "Programme Elective – V", credits: 3 },
+                { name: "Climate Change and Sustainability", credits: 2 },
+                { name: "Ethical Hacking and Penetration Testing", credits: 3 },
+                { name: "Engineering Entrepreneurship Development", credits: 3 },
+                { name: "Summer Internship", credits: 1 }
             ],
             8: [
-                { code: "PROJ-VIII", name: "Project Work / Internship cum Project Work", credits: 8 }
+                { name: "Project Work / Internship cum Project Work", credits: 8 }
             ]
         },
         "civil": {
@@ -624,41 +624,41 @@ const SUBJECT_SCHEMAS = {
                 { code: "EN25C04", name: "English Communication Skills Laboratory – II", credits: 1 }
             ],
             5: [
-                { code: "CE25501", name: "Structural Analysis - I", credits: 3 },
-                { code: "CE25502", name: "Foundation Engineering", credits: 3 },
-                { code: "CE25503", name: "Wastewater Engineering", credits: 3 },
-                { code: "CE25504", name: "Design of Concrete Structures", credits: 3 },
-                { code: "PE-I", name: "Programme Elective I", credits: 3 },
-                { code: "PE-II", name: "Programme Elective II", credits: 3 },
-                { code: "CE25505", name: "Water and Wastewater Engineering Laboratory", credits: 2 },
-                { code: "CE25506", name: "Soil Mechanics Laboratory", credits: 2 },
-                { code: "SDC-III", name: "Skill Development Course - III", credits: 2 },
-                { code: "IOC-I", name: "Industry Oriented Course - I", credits: 1 }
+                { name: "Structural Analysis - I", credits: 3 },
+                { name: "Foundation Engineering", credits: 3 },
+                { name: "Wastewater Engineering", credits: 3 },
+                { name: "Design of Concrete Structures", credits: 3 },
+                { name: "Programme Elective I", credits: 3 },
+                { name: "Programme Elective II", credits: 3 },
+                { name: "Water and Wastewater Engineering Laboratory", credits: 2 },
+                { name: "Soil Mechanics Laboratory", credits: 2 },
+                { name: "Skill Development Course - III", credits: 2 },
+                { name: "Industry Oriented Course - I", credits: 1 }
             ],
             6: [
-                { code: "CE25601", name: "Structural Analysis - II", credits: 3 },
-                { code: "CE25602", name: "Design of Steel Structures", credits: 3 },
-                { code: "CE25603", name: "Railways, Airports and Harbour Engineering", credits: 3 },
-                { code: "PE-III", name: "Programme Elective – III", credits: 3 },
-                { code: "OE-I", name: "Open Elective", credits: 3 },
-                { code: "CE25604", name: "Project Management", credits: 2 },
-                { code: "IOC-II", name: "Industry Oriented Course - II", credits: 1 },
-                { code: "INT-VI", name: "Summer Internship", credits: 1 },
-                { code: "CE25605", name: "Building and Structural Drawing Laboratory", credits: 2 },
-                { code: "SLC-I", name: "Self-Learning Course", credits: 1 }
+                { name: "Structural Analysis - II", credits: 3 },
+                { name: "Design of Steel Structures", credits: 3 },
+                { name: "Railways, Airports and Harbour Engineering", credits: 3 },
+                { name: "Programme Elective – III", credits: 3 },
+                { name: "Open Elective", credits: 3 },
+                { name: "Project Management", credits: 2 },
+                { name: "Industry Oriented Course - II", credits: 1 },
+                { name: "Summer Internship", credits: 1 },
+                { name: "Building and Structural Drawing Laboratory", credits: 2 },
+                { name: "Self-Learning Course", credits: 1 }
             ],
             7: [
-                { code: "CE25701", name: "Engineering Entrepreneurship Development", credits: 3 },
-                { code: "UC25C01", name: "Climate Change and Sustainability", credits: 2 },
-                { code: "CE25702", name: "Estimation, Costing and Valuation Engineering", credits: 3 },
-                { code: "CE25703", name: "Prestressed Concrete Structures", credits: 3 },
-                { code: "PE-IV", name: "Programme Elective - IV", credits: 3 },
-                { code: "PE-V", name: "Programme Elective - V", credits: 3 },
-                { code: "CE25704", name: "Irrigation Engineering and Drawings", credits: 3 },
-                { code: "MP-I", name: "Mini Project", credits: 2 }
+                { name: "Engineering Entrepreneurship Development", credits: 3 },
+                { name: "Climate Change and Sustainability", credits: 2 },
+                { name: "Estimation, Costing and Valuation Engineering", credits: 3 },
+                { name: "Prestressed Concrete Structures", credits: 3 },
+                { name: "Programme Elective - IV", credits: 3 },
+                { name: "Programme Elective - V", credits: 3 },
+                { name: "Irrigation Engineering and Drawings", credits: 3 },
+                { name: "Mini Project", credits: 2 }
             ],
             8: [
-                { code: "PROJ-VIII", name: "Project Work / Internship cum Project Work (PW/IPW)", credits: 8 }
+                { name: "Project Work / Internship cum Project Work (PW/IPW)", credits: 8 }
             ]
         },
         "cse": {
@@ -707,35 +707,35 @@ const SUBJECT_SCHEMAS = {
                 { code: "EN25C04", name: "English Communication Skills Laboratory – II", credits: 1 }
             ],
             5: [
-                { code: "CS25501", name: "Computer Networks", credits: 4 },
-                { code: "CS25502", name: "Compiler Design", credits: 3 },
-                { code: "PE-I", name: "Programme Elective – I", credits: 3 },
-                { code: "CS25503", name: "Cryptography and Cyber Security", credits: 4 },
-                { code: "CS25504", name: "Artificial Intelligence and Machine Learning", credits: 4 },
-                { code: "CS25505", name: "Full Stack Development", credits: 4 },
-                { code: "SDC-III", name: "Skill Development Course – III", credits: 2 },
-                { code: "IOC-I", name: "Industry Oriented Course - I", credits: 1 }
+                { name: "Computer Networks", credits: 4 },
+                { name: "Compiler Design", credits: 3 },
+                { name: "Programme Elective – I", credits: 3 },
+                { name: "Cryptography and Cyber Security", credits: 4 },
+                { name: "Artificial Intelligence and Machine Learning", credits: 4 },
+                { name: "Full Stack Development", credits: 4 },
+                { name: "Skill Development Course – III", credits: 2 },
+                { name: "Industry Oriented Course - I", credits: 1 }
             ],
             6: [
-                { code: "CS25601", name: "Large Language Models", credits: 3 },
-                { code: "PE-II", name: "Programme Elective – II", credits: 3 },
-                { code: "PE-III", name: "Programme Elective – III", credits: 3 },
-                { code: "OE-I", name: "Open Elective", credits: 3 },
-                { code: "IOC-II", name: "Industry Oriented Course - II", credits: 1 },
-                { code: "CS25602", name: "Deep Learning", credits: 4 },
-                { code: "CS25603", name: "Mobile App Development Laboratory", credits: 2 },
-                { code: "SLC-I", name: "Self-Learning Course", credits: 1 }
+                { name: "Large Language Models", credits: 3 },
+                { name: "Programme Elective – II", credits: 3 },
+                { name: "Programme Elective – III", credits: 3 },
+                { name: "Open Elective", credits: 3 },
+                { name: "Industry Oriented Course - II", credits: 1 },
+                { name: "Deep Learning", credits: 4 },
+                { name: "Mobile App Development Laboratory", credits: 2 },
+                { name: "Self-Learning Course", credits: 1 }
             ],
             7: [
-                { code: "UC25C01", name: "Climate Change and Sustainability", credits: 2 },
-                { code: "PE-IV", name: "Programme Elective – IV", credits: 3 },
-                { code: "PE-V", name: "Programme Elective – V", credits: 3 },
-                { code: "ME25C06", name: "Engineering Entrepreneurship Development", credits: 3 },
-                { code: "CS25701", name: "Ethical Hacking and Penetration Testing", credits: 3 },
-                { code: "INT-VII", name: "Summer Internship", credits: 1 }
+                { name: "Climate Change and Sustainability", credits: 2 },
+                { name: "Programme Elective – IV", credits: 3 },
+                { name: "Programme Elective – V", credits: 3 },
+                { name: "Engineering Entrepreneurship Development", credits: 3 },
+                { name: "Ethical Hacking and Penetration Testing", credits: 3 },
+                { name: "Summer Internship", credits: 1 }
             ],
             8: [
-                { code: "PROJ-VIII", name: "Project Work / Internship cum Project Work", credits: 8 }
+                { name: "Project Work / Internship cum Project Work", credits: 8 }
             ]
         },
         "ece": {
@@ -787,41 +787,41 @@ const SUBJECT_SCHEMAS = {
                 { code: "EC25C14", name: "Microcontroller and Peripheral Interfacing Laboratory", credits: 2 }
             ],
             5: [
-                { code: "UC25C01", name: "Climate Change and Sustainability", credits: 2 },
-                { code: "EC25501", name: "Introduction to Standards in Electronics and Communication", credits: 1 },
-                { code: "EC25502", name: "Linear Integrated Circuits", credits: 3 },
-                { code: "EC25503", name: "Digital Signal Processing", credits: 3 },
-                { code: "EC25504", name: "Computer Architecture and Organization", credits: 3 },
-                { code: "PE-I", name: "Programme Elective – I", credits: 3 },
-                { code: "EC25505", name: "Linear Integrated Circuits Laboratory", credits: 2 },
-                { code: "EC25506", name: "Digital Signal Processing Laboratory", credits: 2 },
-                { code: "EC25507", name: "Data Communication Networks", credits: 4 },
-                { code: "SDC-III", name: "Skill Development Course – III", credits: 2 }
+                { name: "Climate Change and Sustainability", credits: 2 },
+                { name: "Introduction to Standards in Electronics and Communication", credits: 1 },
+                { name: "Linear Integrated Circuits", credits: 3 },
+                { name: "Digital Signal Processing", credits: 3 },
+                { name: "Computer Architecture and Organization", credits: 3 },
+                { name: "Programme Elective – I", credits: 3 },
+                { name: "Linear Integrated Circuits Laboratory", credits: 2 },
+                { name: "Digital Signal Processing Laboratory", credits: 2 },
+                { name: "Data Communication Networks", credits: 4 },
+                { name: "Skill Development Course – III", credits: 2 }
             ],
             6: [
-                { code: "PE-II", name: "Programme Elective – II", credits: 3 },
-                { code: "PE-III", name: "Programme Elective – III", credits: 3 },
-                { code: "OE-I", name: "Open Elective", credits: 3 },
-                { code: "EC25601", name: "Antenna Design", credits: 3 },
-                { code: "EC25602", name: "VLSI Design", credits: 3 },
-                { code: "EC25603", name: "Embedded Technology and IoT", credits: 3 },
-                { code: "EC25604", name: "Embedded Technology and IoT Laboratory", credits: 2 },
-                { code: "EC25605", name: "VLSI Design Laboratory", credits: 2 },
-                { code: "IOC-II", name: "Industry Oriented Course - II", credits: 2 },
-                { code: "SLC-I", name: "Self-Learning Course", credits: 1 }
+                { name: "Programme Elective – II", credits: 3 },
+                { name: "Programme Elective – III", credits: 3 },
+                { name: "Open Elective", credits: 3 },
+                { name: "Antenna Design", credits: 3 },
+                { name: "VLSI Design", credits: 3 },
+                { name: "Embedded Technology and IoT", credits: 3 },
+                { name: "Embedded Technology and IoT Laboratory", credits: 2 },
+                { name: "VLSI Design Laboratory", credits: 2 },
+                { name: "Industry Oriented Course - II", credits: 2 },
+                { name: "Self-Learning Course", credits: 1 }
             ],
             7: [
-                { code: "ME25C06", name: "Engineering Entrepreneurship Development", credits: 3 },
-                { code: "EC25702", name: "Optical and Microwave Engineering", credits: 3 },
-                { code: "EC25703", name: "Wireless Communication", credits: 3 },
-                { code: "PE-IV", name: "Programme Elective – IV", credits: 3 },
-                { code: "PE-V", name: "Programme Elective – V", credits: 3 },
-                { code: "EC25704", name: "Wireless Communication Lab", credits: 2 },
-                { code: "EC25705", name: "Microwave and Optical Lab", credits: 2 },
-                { code: "INT-VII", name: "Summer Internship", credits: 1 }
+                { name: "Engineering Entrepreneurship Development", credits: 3 },
+                { name: "Optical and Microwave Engineering", credits: 3 },
+                { name: "Wireless Communication", credits: 3 },
+                { name: "Programme Elective – IV", credits: 3 },
+                { name: "Programme Elective – V", credits: 3 },
+                { name: "Wireless Communication Lab", credits: 2 },
+                { name: "Microwave and Optical Lab", credits: 2 },
+                { name: "Summer Internship", credits: 1 }
             ],
             8: [
-                { code: "PROJ-VIII", name: "Project Work / Internship cum Project Work", credits: 8 }
+                { name: "Project Work / Internship cum Project Work", credits: 8 }
             ]
         },
         "eee": {
@@ -874,41 +874,41 @@ const SUBJECT_SCHEMAS = {
                 { code: "EE25404", name: "Linear Integrated Circuits Laboratory", credits: 2 }
             ],
             5: [
-                { code: "PE-I", name: "Programme Elective – I", credits: 3 },
-                { code: "PE-II", name: "Programme Elective – II", credits: 3 },
-                { code: "EE25501", name: "AC Machines", credits: 3 },
-                { code: "EE25502", name: "Power System Analysis", credits: 3 },
-                { code: "EE25503", name: "Measurements and Instrumentation", credits: 3 },
-                { code: "SDC-III", name: "Skill Development Course – III", credits: 2 },
-                { code: "IOC-I", name: "Industry Oriented Course – I", credits: 1 },
-                { code: "EE25504", name: "AC Machines Laboratory", credits: 2 },
-                { code: "EE25505", name: "Control and Instrumentation Laboratory", credits: 2 }
+                { name: "Programme Elective – I", credits: 3 },
+                { name: "Programme Elective – II", credits: 3 },
+                { name: "AC Machines", credits: 3 },
+                { name: "Power System Analysis", credits: 3 },
+                { name: "Measurements and Instrumentation", credits: 3 },
+                { name: "Skill Development Course – III", credits: 2 },
+                { name: "Industry Oriented Course – I", credits: 1 },
+                { name: "AC Machines Laboratory", credits: 2 },
+                { name: "Control and Instrumentation Laboratory", credits: 2 }
             ],
             6: [
-                { code: "EE25601", name: "Electrical Machine Design", credits: 4 },
-                { code: "EE25602", name: "Microprocessors & Microcontrollers", credits: 3 },
-                { code: "EE25603", name: "Power System Protection and Switch Gear", credits: 3 },
-                { code: "PE-III", name: "Programme Elective – III (Emerging Technology)", credits: 3 },
-                { code: "OE-I", name: "Open Elective", credits: 3 },
-                { code: "EE25604", name: "Introduction to Standards in Electrical Engineering", credits: 1 },
-                { code: "EE25605", name: "Power Electronics", credits: 3 },
-                { code: "IOC-II", name: "Industry Oriented Course – II", credits: 1 },
-                { code: "SLC-I", name: "Self-Learning Course", credits: 1 },
-                { code: "EE25606", name: "Microprocessors & Microcontrollers Laboratory", credits: 1.5 },
-                { code: "EE25607", name: "Power Electronics Laboratory", credits: 1.5 }
+                { name: "Electrical Machine Design", credits: 4 },
+                { name: "Microprocessors & Microcontrollers", credits: 3 },
+                { name: "Power System Protection and Switch Gear", credits: 3 },
+                { name: "Programme Elective – III (Emerging Technology)", credits: 3 },
+                { name: "Open Elective", credits: 3 },
+                { name: "Introduction to Standards in Electrical Engineering", credits: 1 },
+                { name: "Power Electronics", credits: 3 },
+                { name: "Industry Oriented Course – II", credits: 1 },
+                { name: "Self-Learning Course", credits: 1 },
+                { name: "Microprocessors & Microcontrollers Laboratory", credits: 1.5 },
+                { name: "Power Electronics Laboratory", credits: 1.5 }
             ],
             7: [
-                { code: "ME25C06", name: "Engineering Entrepreneurship Development", credits: 3 },
-                { code: "UC25C01", name: "Climate Change and Sustainability", credits: 2 },
-                { code: "EE25701", name: "High Voltage Engineering", credits: 3 },
-                { code: "PE-IV", name: "Programme Elective – IV", credits: 3 },
-                { code: "PE-V", name: "Programme Elective – V", credits: 3 },
-                { code: "EE25702", name: "Project Management", credits: 2 },
-                { code: "EE25703", name: "Power System Laboratory", credits: 2 },
-                { code: "INT-VII", name: "Summer Internship", credits: 1 }
+                { name: "Engineering Entrepreneurship Development", credits: 3 },
+                { name: "Climate Change and Sustainability", credits: 2 },
+                { name: "High Voltage Engineering", credits: 3 },
+                { name: "Programme Elective – IV", credits: 3 },
+                { name: "Programme Elective – V", credits: 3 },
+                { name: "Project Management", credits: 2 },
+                { name: "Power System Laboratory", credits: 2 },
+                { name: "Summer Internship", credits: 1 }
             ],
             8: [
-                { code: "PROJ-VIII", name: "Project Work / Internship cum Project Work", credits: 8 }
+                { name: "Project Work / Internship cum Project Work", credits: 8 }
             ]
         },
         "mech": {
@@ -959,37 +959,37 @@ const SUBJECT_SCHEMAS = {
                 { code: "SDC-II", name: "Skill Development Course – II", credits: 4 }
             ],
             5: [
-                { code: "ME25501", name: "Design of Machine Elements", credits: 3 },
-                { code: "ME25502", name: "Manufacturing Processes – II", credits: 4 },
-                { code: "ME25503", name: "Thermal Engineering – II", credits: 4 },
-                { code: "ME25504", name: "Measurements and Instrumentation", credits: 3 },
-                { code: "PE-I", name: "Programme Elective – I", credits: 3 },
-                { code: "OE-I", name: "Open Elective", credits: 3 },
-                { code: "SDC-III", name: "Skill Development Course – III", credits: 2 },
-                { code: "IOC-I", name: "Industry Oriented Course – I", credits: 1 }
+                { name: "Design of Machine Elements", credits: 3 },
+                { name: "Manufacturing Processes – II", credits: 4 },
+                { name: "Thermal Engineering – II", credits: 4 },
+                { name: "Measurements and Instrumentation", credits: 3 },
+                { name: "Programme Elective – I", credits: 3 },
+                { name: "Open Elective", credits: 3 },
+                { name: "Skill Development Course – III", credits: 2 },
+                { name: "Industry Oriented Course – I", credits: 1 }
             ],
             6: [
-                { code: "ME25601", name: "Design of Transmission Systems", credits: 4 },
-                { code: "ME25602", name: "Heat and Mass Transfer", credits: 4 },
-                { code: "ME25603", name: "FEM Applications in Mechanical Engineering", credits: 4 },
-                { code: "ME25604", name: "Power Generation Technologies", credits: 3 },
-                { code: "PE-II", name: "Programme Elective – II", credits: 3 },
-                { code: "PE-III", name: "Programme Elective – III", credits: 3 },
-                { code: "ME25605", name: "Computer Aided Modelling Laboratory", credits: 2 },
-                { code: "SLC-I", name: "Self-Learning Course", credits: 1 },
-                { code: "IOC-II", name: "Industry Oriented Course – II", credits: 1 }
+                { name: "Design of Transmission Systems", credits: 4 },
+                { name: "Heat and Mass Transfer", credits: 4 },
+                { name: "FEM Applications in Mechanical Engineering", credits: 4 },
+                { name: "Power Generation Technologies", credits: 3 },
+                { name: "Programme Elective – II", credits: 3 },
+                { name: "Programme Elective – III", credits: 3 },
+                { name: "Computer Aided Modelling Laboratory", credits: 2 },
+                { name: "Self-Learning Course", credits: 1 },
+                { name: "Industry Oriented Course – II", credits: 1 }
             ],
             7: [
-                { code: "ME25C06", name: "Engineering Entrepreneurship Development", credits: 3 },
-                { code: "UC25C01", name: "Climate Change and Sustainability", credits: 2 },
-                { code: "ME25701", name: "Mechatronics and Automation", credits: 4 },
-                { code: "PE-IV", name: "Programme Elective – IV", credits: 3 },
-                { code: "PE-V", name: "Programme Elective – V", credits: 3 },
-                { code: "ME25702", name: "Project Management", credits: 2 },
-                { code: "INT-VII", name: "Industrial Training", credits: 1 }
+                { name: "Engineering Entrepreneurship Development", credits: 3 },
+                { name: "Climate Change and Sustainability", credits: 2 },
+                { name: "Mechatronics and Automation", credits: 4 },
+                { name: "Programme Elective – IV", credits: 3 },
+                { name: "Programme Elective – V", credits: 3 },
+                { name: "Project Management", credits: 2 },
+                { name: "Industrial Training", credits: 1 }
             ],
             8: [
-                { code: "PROJ-VIII", name: "Project Work / Internship cum Project Work", credits: 8 }
+                { name: "Project Work / Internship cum Project Work", credits: 8 }
             ]
         }
     }
@@ -1003,9 +1003,7 @@ const GRADE_POINTS_2021 = {
     "B+": 7,
     "B": 6,
     "C": 5,
-    "RA": 0,
-    "SA": 0,
-    "W": 0
+    "U": 0
 };
 
 // Regulation 2025 — all departments common grade scale
@@ -1663,12 +1661,46 @@ function toggleSettingsModal() {
     }
 }
 
+function updateHistoryUI(animate = true) {
+    const savedGPA = parseFloat(localStorage.getItem('saved_gpa')) || 0.00;
+    const savedCGPA = parseFloat(localStorage.getItem('saved_cgpa')) || 0.00;
+    const savedCredits = parseFloat(localStorage.getItem('saved_credits')) || 0.0;
+
+    const dbGpa = document.getElementById('settings-saved-gpa');
+    const dbCgpa = document.getElementById('settings-saved-cgpa');
+    const dbCredits = document.getElementById('settings-saved-credits');
+
+    const homeGpa = document.getElementById('home-saved-gpa');
+    const homeCgpa = document.getElementById('home-saved-cgpa');
+    const homeCredits = document.getElementById('home-saved-credits');
+
+    if (animate) {
+        if (dbGpa) animateValue(dbGpa, parseFloat(dbGpa.innerText) || 0, savedGPA, 700);
+        if (dbCgpa) animateValue(dbCgpa, parseFloat(dbCgpa.innerText) || 0, savedCGPA, 700);
+        if (dbCredits) animateValue(dbCredits, parseFloat(dbCredits.innerText) || 0, savedCredits, 700);
+
+        if (homeGpa) animateValue(homeGpa, parseFloat(homeGpa.innerText) || 0, savedGPA, 700);
+        if (homeCgpa) animateValue(homeCgpa, parseFloat(homeCgpa.innerText) || 0, savedCGPA, 700);
+        if (homeCredits) animateValue(homeCredits, parseFloat(homeCredits.innerText) || 0, savedCredits, 700);
+    } else {
+        if (dbGpa) dbGpa.innerText = savedGPA.toFixed(2);
+        if (dbCgpa) dbCgpa.innerText = savedCGPA.toFixed(2);
+        if (dbCredits) dbCredits.innerText = savedCredits.toFixed(1);
+
+        if (homeGpa) homeGpa.innerText = savedGPA.toFixed(2);
+        if (homeCgpa) homeCgpa.innerText = savedCGPA.toFixed(2);
+        if (homeCredits) homeCredits.innerText = savedCredits.toFixed(1);
+    }
+}
+
 // Clear local data records
 function clearAllData() {
     if (confirm("Are you sure you want to delete your saved GPA/CGPA results? This action cannot be undone.")) {
         localStorage.removeItem('saved_gpa');
         localStorage.removeItem('saved_cgpa');
         localStorage.removeItem('saved_credits');
+        localStorage.removeItem('last_gpa_details');
+        localStorage.removeItem('last_cgpa_details');
 
         // Reset settings display values
         const dbGpa = document.getElementById('settings-saved-gpa');
@@ -1677,6 +1709,14 @@ function clearAllData() {
         if (dbGpa) dbGpa.innerText = '0.00';
         if (dbCgpa) dbCgpa.innerText = '0.00';
         if (dbCredits) dbCredits.innerText = '0.0';
+
+        // Reset home page history display values
+        const homeGpa = document.getElementById('home-saved-gpa');
+        const homeCgpa = document.getElementById('home-saved-cgpa');
+        const homeCredits = document.getElementById('home-saved-credits');
+        if (homeGpa) homeGpa.innerText = '0.00';
+        if (homeCgpa) homeCgpa.innerText = '0.00';
+        if (homeCredits) homeCredits.innerText = '0.0';
 
         showCustomAlert("Records Cleared", "All cached analytics and performance data have been successfully deleted.");
     }
@@ -1789,21 +1829,21 @@ function selectSemester(semesterNum) {
                     <option value="B+">B+ (Good) - 7</option>
                     <option value="B">B (Average) - 6</option>
                     <option value="C">C (Satisfactory) - 5</option>
-                    <option value="RA">RA (Re-Appearance) - 0</option>
-                    <option value="SA">SA (Shortage of Attendance) - 0</option>
-                    <option value="W">W (Withdrawal) - 0</option>`;
+                    <option value="U">U (Re-Appearance / Fail) - 0</option>`;
 
     subjects.forEach((sub, index) => {
         let isPE = false;
         let displayName = sub.name;
         let peButtonHtml = '';
         
-        // Hide code for Open, Professional, Programme Electives, and Mandatory Courses across all regulations
+        // Hide code for Open, Professional, Programme Electives, Mandatory Courses, missing codes, or Regulation 2025 Semesters 5, 6, 7, 8
         const nameLower = sub.name.toLowerCase();
-        const hideCode = nameLower.includes("open elective") || 
+        const hideCode = !sub.code || 
+                         nameLower.includes("open elective") || 
                          nameLower.includes("professional elective") || 
                          nameLower.includes("programme elective") ||
-                         nameLower.includes("mandatory course");
+                         nameLower.includes("mandatory course") ||
+                         (state.selectedRegulation === '2025' && [5, 6, 7, 8].includes(Number(state.selectedSemester)));
 
         const isProfessionalElective = sub.name.includes("Professional Elective") && 
             ((state.selectedRegulation === '2021' && ['cse', 'ece', 'eee', 'mech', 'civil', 'aids'].includes(state.selectedBranch)) || 
@@ -1869,6 +1909,7 @@ function calculateGPA() {
     let totalCredits = 0;
     let totalProduct = 0;
     let hasUnselected = false;
+    let savedSubjectDetails = [];
 
     const gradeMap = getGradePoints(state.selectedRegulation);
 
@@ -1877,6 +1918,16 @@ function calculateGPA() {
         const chosenGrade = selectEl.value;
         const credits = parseFloat(selectEl.getAttribute('data-credits'));
         const isOptional = selectEl.getAttribute('data-optional') === 'true';
+
+        let codeToUse = sub.code || '';
+        let nameToUse = sub.name;
+
+        const peKey = `${state.selectedSemester}-${index}`;
+        if (selectedPEs[peKey]) {
+            nameToUse = selectedPEs[peKey];
+        } else if (selectedOEs[peKey]) {
+            nameToUse = selectedOEs[peKey];
+        }
 
         if (chosenGrade === "") {
             if (!isOptional) {
@@ -1891,6 +1942,14 @@ function calculateGPA() {
             const points = gradeMap[chosenGrade];
             totalProduct += (credits * points);
             totalCredits += credits;
+
+            savedSubjectDetails.push({
+                code: codeToUse,
+                name: nameToUse,
+                credits: credits,
+                grade: chosenGrade,
+                points: points
+            });
         }
     });
 
@@ -1907,15 +1966,24 @@ function calculateGPA() {
     const gpa = totalProduct / totalCredits;
     displayResult(gpa.toFixed(2), "Your GPA Score", getGPAFeedBack(gpa));
 
-    // Save outputs to localStorage
+    // Save outputs and detailed subjects breakdown to localStorage
     localStorage.setItem('saved_gpa', gpa.toFixed(2));
     localStorage.setItem('saved_credits', totalCredits.toFixed(1));
 
-    // Update Settings UI if it exists
-    const dbGpa = document.getElementById('settings-saved-gpa');
-    const dbCredits = document.getElementById('settings-saved-credits');
-    if (dbGpa) animateValue(dbGpa, parseFloat(dbGpa.innerText) || 0, gpa, 700);
-    if (dbCredits) animateValue(dbCredits, parseFloat(dbCredits.innerText) || 0, totalCredits, 700);
+    const branchName = BRANCHES[state.selectedBranch] || (state.selectedBranch ? state.selectedBranch.toUpperCase() : '');
+    const gpaDetailObj = {
+        gpa: gpa.toFixed(2),
+        regulation: state.selectedRegulation,
+        branch: branchName,
+        semester: state.selectedSemester,
+        credits: totalCredits.toFixed(1),
+        timestamp: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        subjects: savedSubjectDetails
+    };
+    localStorage.setItem('last_gpa_details', JSON.stringify(gpaDetailObj));
+
+    // Update History UI across Home and Settings
+    updateHistoryUI(true);
 }
 
 function calculateCGPA() {
@@ -1962,9 +2030,15 @@ function calculateCGPA() {
     // Save to localStorage
     localStorage.setItem('saved_cgpa', cgpa.toFixed(2));
 
-    // Update Settings UI
-    const dbCgpa = document.getElementById('settings-saved-cgpa');
-    if (dbCgpa) animateValue(dbCgpa, parseFloat(dbCgpa.innerText) || 0, cgpa, 700);
+    const cgpaDetailObj = {
+        cgpa: cgpa.toFixed(2),
+        timestamp: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        semesters: semGpas
+    };
+    localStorage.setItem('last_cgpa_details', JSON.stringify(cgpaDetailObj));
+
+    // Update History UI across Home and Settings
+    updateHistoryUI(true);
 }
 
 function resetCGPA() {
@@ -2264,6 +2338,148 @@ function closeModal() {
     modal.classList.remove('active');
 }
 
+// History Detail Modal Viewers
+function viewGPAHistory() {
+    const raw = localStorage.getItem('last_gpa_details');
+    const modal = document.getElementById('history-detail-modal');
+    const titleEl = document.getElementById('history-modal-title');
+    const subtitleEl = document.getElementById('history-modal-subtitle');
+    const scoreEl = document.getElementById('history-modal-score');
+    const container = document.getElementById('history-modal-body-container');
+
+    if (!modal) return;
+    const clearBtn = document.getElementById('history-clear-btn');
+
+    if (!raw) {
+        if (clearBtn) clearBtn.style.display = 'none';
+        titleEl.innerText = "No Saved GPA History";
+        subtitleEl.innerText = "Calculate your semester GPA first to view subject details.";
+        scoreEl.innerText = "0.00";
+        container.innerHTML = `
+            <div style="text-align: center; color: var(--text-muted); padding: 1.5rem 1rem;">
+                <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; opacity: 0.4; margin-bottom: 0.75rem;"></i>
+                <p style="font-size: 0.85rem;">No subject records found in local storage.</p>
+                <button class="btn-ripple" onclick="closeHistoryModal(); navigateTo('regulation-page');" style="margin-top: 1rem; background: var(--primary-gradient); color: #fff; border: none; padding: 0.55rem 1.1rem; border-radius: 12px; font-weight: 600; font-size: 0.8rem; cursor: pointer;">
+                    <i class="fa-solid fa-calculator"></i> Calculate GPA Now
+                </button>
+            </div>
+        `;
+        modal.classList.add('active');
+        return;
+    }
+
+    if (clearBtn) clearBtn.style.display = 'flex';
+
+    try {
+        const data = JSON.parse(raw);
+        titleEl.innerText = `GPA Breakdown`;
+        subtitleEl.innerText = `R${data.regulation || '--'} • ${data.branch || ''} • Sem ${data.semester || '--'} • ${data.credits || 0} Credits (${data.timestamp || ''})`;
+        scoreEl.innerText = data.gpa || "0.00";
+
+        container.innerHTML = '';
+        if (data.subjects && data.subjects.length > 0) {
+            data.subjects.forEach(sub => {
+                const item = document.createElement('div');
+                item.className = 'glass-card';
+                item.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 0.7rem 0.85rem; margin-bottom: 0.5rem; border-radius: 14px;';
+                
+                item.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 0.2rem; max-width: 72%;">
+                        ${sub.code ? `<span class="subject-code" style="font-size: 0.65rem; align-self: flex-start;">${sub.code}</span>` : ''}
+                        <span style="font-weight: 600; font-size: 0.83rem; color: var(--text-main); line-height: 1.2;">${sub.name}</span>
+                        <span style="font-size: 0.72rem; color: var(--text-muted);">${sub.credits} Credits</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                        <span style="font-weight: 800; font-size: 0.95rem; color: var(--accent); background: rgba(157, 78, 221, 0.2); padding: 0.2rem 0.55rem; border-radius: 8px; border: 1px solid var(--primary-glow);">${sub.grade}</span>
+                        <span style="font-size: 0.68rem; color: var(--text-muted); margin-top: 3px;">${sub.points} pts</span>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+    } catch(e) {
+        console.error("Failed to parse GPA history", e);
+    }
+
+    modal.classList.add('active');
+}
+
+function viewCGPAHistory() {
+    const raw = localStorage.getItem('last_cgpa_details');
+    const modal = document.getElementById('history-detail-modal');
+    const titleEl = document.getElementById('history-modal-title');
+    const subtitleEl = document.getElementById('history-modal-subtitle');
+    const scoreEl = document.getElementById('history-modal-score');
+    const container = document.getElementById('history-modal-body-container');
+
+    if (!modal) return;
+    const clearBtn = document.getElementById('history-clear-btn');
+
+    if (!raw) {
+        if (clearBtn) clearBtn.style.display = 'none';
+        titleEl.innerText = "No Saved CGPA History";
+        subtitleEl.innerText = "Calculate your CGPA first to view semester breakdown.";
+        scoreEl.innerText = "0.00";
+        container.innerHTML = `
+            <div style="text-align: center; color: var(--text-muted); padding: 1.5rem 1rem;">
+                <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; opacity: 0.4; margin-bottom: 0.75rem;"></i>
+                <p style="font-size: 0.85rem;">No semester GPA records found in local storage.</p>
+                <button class="btn-ripple" onclick="closeHistoryModal(); navigateTo('cgpa-page');" style="margin-top: 1rem; background: var(--primary-gradient); color: #fff; border: none; padding: 0.55rem 1.1rem; border-radius: 12px; font-weight: 600; font-size: 0.8rem; cursor: pointer;">
+                    <i class="fa-solid fa-chart-line"></i> Calculate CGPA Now
+                </button>
+            </div>
+        `;
+        modal.classList.add('active');
+        return;
+    }
+
+    if (clearBtn) clearBtn.style.display = 'flex';
+
+    try {
+        const data = JSON.parse(raw);
+        titleEl.innerText = `CGPA Breakdown`;
+        subtitleEl.innerText = `Cumulative average across ${data.semesters ? data.semesters.length : 0} Semesters (${data.timestamp || ''})`;
+        scoreEl.innerText = data.cgpa || "0.00";
+
+        container.innerHTML = '';
+        if (data.semesters && data.semesters.length > 0) {
+            data.semesters.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'glass-card';
+                row.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0.9rem; margin-bottom: 0.5rem; border-radius: 14px;';
+                
+                row.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="width: 34px; height: 34px; border-radius: 10px; background: rgba(255, 121, 198, 0.18); color: #ff79c6; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem;">
+                            S${item.sem}
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 700; font-size: 0.85rem; color: var(--text-main);">Semester ${item.sem}</span>
+                            <span style="font-size: 0.7rem; color: var(--text-muted);">${getGPAFeedBack(item.gpa).split('.')[0]}</span>
+                        </div>
+                    </div>
+                    <span style="font-weight: 800; font-size: 1rem; color: #ff79c6; background: rgba(255, 121, 198, 0.15); padding: 0.2rem 0.65rem; border-radius: 9px; border: 1px solid rgba(255, 121, 198, 0.3);">${item.gpa.toFixed(2)}</span>
+                `;
+                container.appendChild(row);
+            });
+        }
+    } catch(e) {
+        console.error("Failed to parse CGPA history", e);
+    }
+
+    modal.classList.add('active');
+}
+
+function closeHistoryModal() {
+    const modal = document.getElementById('history-detail-modal');
+    if (modal) modal.classList.remove('active');
+}
+
+function clearDataFromHistoryModal() {
+    clearAllData();
+    closeHistoryModal();
+}
+
 // Helper: Animate numbers
 function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
@@ -2283,18 +2499,8 @@ function animateValue(obj, start, end, duration) {
 // Init Setup on Script load
 document.addEventListener('DOMContentLoaded', () => {
     // App relies on the original default theme.
-    // Load Dashboard persisted states to settings
-    const savedGPA = parseFloat(localStorage.getItem('saved_gpa')) || 0.00;
-    const savedCGPA = parseFloat(localStorage.getItem('saved_cgpa')) || 0.00;
-    const savedCredits = parseFloat(localStorage.getItem('saved_credits')) || 0.0;
-
-    const dbGpa = document.getElementById('settings-saved-gpa');
-    const dbCgpa = document.getElementById('settings-saved-cgpa');
-    const dbCredits = document.getElementById('settings-saved-credits');
-
-    if (dbGpa) animateValue(dbGpa, 0, savedGPA, 800);
-    if (dbCgpa) animateValue(dbCgpa, 0, savedCGPA, 800);
-    if (dbCredits) animateValue(dbCredits, 0, savedCredits, 800);
+    // Load persisted local history to Home dashboard and Settings
+    updateHistoryUI(true);
 });
 
 // App Click Tap Ripple Action Listener
