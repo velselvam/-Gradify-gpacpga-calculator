@@ -1493,7 +1493,10 @@ button:active {
 .welcome-container {
     padding-bottom: 2rem;
     flex: 1;
-    overflow: hidden; /* Ensure it never scrolls */
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 /* ==========================================================================
